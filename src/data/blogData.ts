@@ -1,4 +1,4 @@
-import type { ListPageText } from './textData'
+import type { ListPageText } from './dataTypes'
 
 export type BlogPost = {
   slug: string

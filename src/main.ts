@@ -4,11 +4,13 @@ import { HeroSection } from './components/heroSection'
 import { AboutMePage } from './pages/about-me/aboutMePage'
 import { BlogPostPage, BlogsPage } from './pages/blogs/blogsPage'
 import { NotFoundPage } from './pages/not-found/notFoundPage'
+import { initServiceOfferingsInteractions, ServiceOfferingsPage } from './pages/service-offerings/serviceOfferingsPage'
 import { initTechStackTabs, TechStackPage } from './pages/tech-stack/techStackPage'
 
 type Route =
   | { name: 'home' }
   | { name: 'about-me' }
+  | { name: 'service-offerings' }
   | { name: 'tech-stack' }
   | { name: 'blogs' }
   | { name: 'blog-post'; slug: string }
@@ -31,6 +33,8 @@ function getRoute(): Route {
   switch (hash) {
     case 'about-me':
       return { name: 'about-me' }
+    case 'service-offerings':
+      return { name: 'service-offerings' }
     case 'tech-stack':
       return { name: 'tech-stack' }
     case 'blogs':
@@ -44,6 +48,8 @@ function renderRoute(route: Route): string {
   switch (route.name) {
     case 'about-me':
       return AboutMePage()
+    case 'service-offerings':
+      return ServiceOfferingsPage()
     case 'tech-stack':
       return TechStackPage()
     case 'blogs':
@@ -53,7 +59,7 @@ function renderRoute(route: Route): string {
     case 'not-found':
       return NotFoundPage()
     default:
-      return `${HeroSection()}${FeatureGrid()}`
+      return `<div class="home-stack">${HeroSection()}${FeatureGrid()}</div>`
   }
 }
 
@@ -95,6 +101,10 @@ function render(): void {
 
   if (route.name === 'tech-stack') {
     initTechStackTabs()
+  }
+
+  if (route.name === 'service-offerings') {
+    initServiceOfferingsInteractions()
   }
 }
 

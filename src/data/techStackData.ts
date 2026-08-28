@@ -82,18 +82,6 @@ export const techStackData: TechStackData = {
           iconAccentClass: 'text-violet-200',
         },
         {
-          name: 'C#',
-          summary: 'Strongly typed application development for APIs, services, and enterprise tooling.',
-          iconPath: 'M6 10l10-5 10 5v12l-10 5-10-5V10zm8 6h4M16 14v4M11 18h8',
-          iconAccentClass: 'text-violet-300',
-        },
-        {
-          name: 'Go',
-          summary: 'Efficient backend and CLI development with simple concurrency patterns.',
-          iconPath: 'M7 16h18M10 13h3m-3 6h3m8-6h3m-3 6h3M9 10h14l3 6-3 6H9l-3-6 3-6z',
-          iconAccentClass: 'text-cyan-300',
-        },
-        {
           name: 'JSON',
           summary: 'Structured data modeling for APIs, configuration, and schema-driven workflows.',
           iconPath: 'M11 8c-2 2-3 4-3 8s1 6 3 8 M21 8c2 2 3 4 3 8s-1 6-3 8 M14 10h4v12h-4',
