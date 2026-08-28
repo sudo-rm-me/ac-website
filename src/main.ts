@@ -64,8 +64,6 @@ function renderRoute(route: Route): string {
 }
 
 function App(route: Route): string {
-  const logoSrc = `${import.meta.env.BASE_URL}ac-logo.svg`
-
   return `
   <main class="relative isolate min-h-screen overflow-hidden bg-stone-950 text-stone-100">
     <div class="pointer-events-none absolute -left-24 top-0 h-80 w-80 rounded-full bg-violet-500/25 blur-3xl"></div>
