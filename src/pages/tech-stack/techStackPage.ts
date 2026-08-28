@@ -1,10 +1,14 @@
 import { techStackData } from '../../data/techStackData'
 
 export function TechStackPage(): string {
-	const totalTools = techStackData.categories.reduce((count, category) => count + category.items.length, 0)
+	const sortedCategories = techStackData.categories.map((category) => ({
+		...category,
+		items: [...category.items].sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })),
+	}))
+	const totalTools = sortedCategories.reduce((count, category) => count + category.items.length, 0)
 	const summaryTypewriterStyle = `--typewriter-ch: ${techStackData.summary.length}; --typewriter-delay: 0.2s; --typewriter-duration: 2s;`
 
-	const tabButtons = techStackData.categories
+	const tabButtons = sortedCategories
 		.map(
 			(category, categoryIndex) => `
 				<button
@@ -20,7 +24,7 @@ export function TechStackPage(): string {
 		)
 		.join('')
 
-	const categoryPanels = techStackData.categories
+	const categoryPanels = sortedCategories
 		.map(
 			(category, categoryIndex) => `
 				<div data-tech-panel data-tech-index="${categoryIndex}" class="${categoryIndex === 0 ? 'block tech-panel-enter' : 'hidden'}">
@@ -73,7 +77,7 @@ export function TechStackPage(): string {
 					<div class="grid min-w-[280px] grid-cols-2 gap-3">
 						<div class="rounded-xl border border-emerald-200/25 bg-emerald-200/10 px-4 py-3">
 							<p class="text-xs uppercase tracking-[0.14em] text-emerald-100/80">Categories</p>
-							<p class="text-2xl font-black text-emerald-50">${techStackData.categories.length}</p>
+							<p class="text-2xl font-black text-emerald-50">${sortedCategories.length}</p>
 						</div>
 						<div class="rounded-xl border border-sky-300/30 bg-sky-300/10 px-4 py-3">
 							<p class="text-xs uppercase tracking-[0.14em] text-sky-100/80">Technologies</p>

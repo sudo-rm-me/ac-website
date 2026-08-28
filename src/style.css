@@ -1,15 +1,15 @@
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
 
 :root {
-  font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  font-family: 'Instrument Sans', 'Segoe UI', sans-serif;
 }
 
 h1,
 h2,
 h3,
 .top-brand-name {
-  font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Sora', 'Instrument Sans', sans-serif;
   letter-spacing: -0.01em;
 }
 
@@ -41,12 +41,24 @@ h3,
   }
 }
 
+@keyframes caretBlinkLeft {
+  50% {
+    border-left-color: transparent;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+}
+
+.home-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
 }
 
 .rise-in {
@@ -68,6 +80,21 @@ body {
   animation:
     typewriter var(--typewriter-duration) steps(var(--typewriter-ch), end) var(--typewriter-delay) forwards,
     caretBlink 0.75s step-end calc(var(--typewriter-delay) + var(--typewriter-duration)) infinite;
+}
+
+.typewriter-text-reverse {
+  direction: rtl;
+  unicode-bidi: isolate;
+  border-right: 0;
+  border-left: 2px solid rgb(231 229 228 / 0.9);
+  animation:
+    typewriter var(--typewriter-duration) steps(var(--typewriter-ch), end) var(--typewriter-delay) forwards,
+    caretBlinkLeft 0.75s step-end calc(var(--typewriter-delay) + var(--typewriter-duration)) infinite;
+}
+
+.typewriter-text-reverse .typewriter-text-content {
+  direction: ltr;
+  unicode-bidi: isolate;
 }
 
 @keyframes techPanelIn {
@@ -93,6 +120,20 @@ body {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes servicePanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.99);
+    filter: blur(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
   }
 }
 
@@ -132,30 +173,18 @@ body {
   }
 }
 
-@keyframes brandNameGlow {
+@keyframes brandNameAmbient {
   0%,
   100% {
-    text-shadow:
-      0 0 14px rgb(167 139 250 / 0.45),
-      0 0 28px rgb(56 189 248 / 0.2);
+    text-shadow: 0 0 10px rgb(167 139 250 / 0.2);
     transform: translateY(0);
+    opacity: 0.95;
   }
 
   50% {
-    text-shadow:
-      0 0 18px rgb(196 181 253 / 0.75),
-      0 0 34px rgb(45 212 191 / 0.3);
-    transform: translateY(-1px);
-  }
-}
-
-@keyframes brandNameSheen {
-  from {
-    background-position: -180% 0;
-  }
-
-  to {
-    background-position: 220% 0;
+    text-shadow: 0 0 14px rgb(196 181 253 / 0.35);
+    transform: translateY(-0.5px);
+    opacity: 1;
   }
 }
 
@@ -207,14 +236,8 @@ body {
 .top-brand-name {
   color: rgb(237 233 254);
   letter-spacing: 0.01em;
-  background: linear-gradient(90deg, rgb(224 231 255), rgb(196 181 253), rgb(125 211 252), rgb(224 231 255));
-  background-size: 220% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation:
-    brandNameGlow 3.4s ease-in-out infinite,
-    brandNameSheen 5.2s linear infinite;
+  text-shadow: 0 0 10px rgb(167 139 250 / 0.2);
+  animation: brandNameAmbient 7s ease-in-out infinite;
 }
 
 .tech-tab {
@@ -223,21 +246,26 @@ body {
   background: linear-gradient(135deg, rgb(41 37 36 / 0.78), rgb(24 24 27 / 0.72));
   color: rgb(214 211 209 / 0.95);
   backdrop-filter: blur(4px);
+  transition:
+    border-color 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    background 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .tech-tab:hover {
   border-color: rgb(216 180 254 / 0.65);
   background: linear-gradient(120deg, rgb(88 28 135 / 0.3), rgb(30 64 175 / 0.22));
   color: rgb(245 243 255);
+  transition-duration: 220ms;
 }
 
 .tech-tab-active {
-  border-color: rgb(196 181 253 / 0.9);
-  background: linear-gradient(120deg, rgb(124 58 237 / 0.5), rgb(190 24 93 / 0.34));
-  color: rgb(250 245 255);
-  box-shadow:
-    0 8px 22px -14px rgb(167 139 250 / 0.75),
-    inset 0 1px 0 rgb(255 255 255 / 0.25);
+  border-color: rgb(216 180 254 / 0.65);
+  background: linear-gradient(120deg, rgb(88 28 135 / 0.3), rgb(30 64 175 / 0.22));
+  color: rgb(245 243 255);
+  box-shadow: none;
+  transition-duration: 220ms;
 }
 
 .tech-tab-active::after {
@@ -278,10 +306,68 @@ body {
   background: linear-gradient(90deg, rgb(167 139 250 / 0.55), rgb(56 189 248 / 0.45));
 }
 
+.service-offering-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-color: rgb(103 232 249 / 0.5);
+  background: linear-gradient(145deg, rgb(8 24 36 / 0.94), rgb(21 24 36 / 0.9));
+  color: rgb(248 250 252 / 0.99);
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.service-offering-title {
+  display: -webkit-box;
+  min-height: 2.6em;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.service-offering-button:hover {
+  border-color: rgb(165 243 252 / 0.9);
+  background: linear-gradient(145deg, rgb(12 74 110 / 0.72), rgb(14 116 144 / 0.58));
+  box-shadow: 0 12px 28px -16px rgb(34 211 238 / 0.9);
+}
+
+.service-offering-button:focus-visible {
+  outline: 2px solid rgb(103 232 249 / 0.95);
+  outline-offset: 2px;
+}
+
+.service-offering-button-active {
+  border-color: rgb(207 250 254 / 0.98);
+  background: linear-gradient(125deg, rgb(8 47 73 / 0.94), rgb(8 145 178 / 0.72));
+  box-shadow:
+    inset 4px 0 0 rgb(103 232 249 / 0.85),
+    0 10px 28px -16px rgb(34 211 238 / 0.95),
+    inset 0 1px 0 rgb(255 255 255 / 0.2);
+}
+
+.service-offering-panel-enter {
+  animation: servicePanelIn 0.34s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.service-offering-example {
+  border: 1px solid rgb(125 211 252 / 0.52);
+  border-radius: 0.75rem;
+  background: rgb(8 47 73 / 0.62);
+  padding: 0.65rem 0.85rem;
+  color: rgb(248 250 252 / 1);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .home-fab,
   .home-fab::before,
   .top-brand-name,
+  .service-offering-button,
+  .service-offering-panel-enter,
   .tech-panel-enter,
   .tech-panel-enter .tech-item-card,
   .tech-tab {

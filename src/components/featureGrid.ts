@@ -1,4 +1,6 @@
-import { featureGridText, type FeatureText } from '../data/textData'
+import { featureGridText } from '../data/featureGridData'
+import { heroSectionText } from '../data/heroSectionData'
+import type { FeatureText } from '../data/dataTypes'
 
 function FeatureCard({ title, colorClass, shadowClass, description, href }: FeatureText): string {
   return `
@@ -10,6 +12,8 @@ function FeatureCard({ title, colorClass, shadowClass, description, href }: Feat
 }
 
 export function FeatureGrid(): string {
+  const enquiriesLength = heroSectionText.enquiries.length
+
   const cards = featureGridText
     .map((feature, index) => {
       const delay = 320 + index * 120
@@ -19,5 +23,10 @@ export function FeatureGrid(): string {
     })
     .join('')
 
-  return `<div class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">${cards}</div>`
+  return `
+    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">${cards}</div>
+    <div class="rise-in self-center text-stone-300" style="animation-delay: 240ms">
+      <span class="typewriter-text" style="--typewriter-ch: ${enquiriesLength + 1}; --typewriter-delay: 0.2s; --typewriter-duration: 2s;">${heroSectionText.enquiries}</span>
+    </div>
+  `
 }

@@ -1,4 +1,4 @@
-import type { BasePageText } from './textData'
+import type { BasePageText } from './dataTypes'
 
 export type AboutMeText = BasePageText & {
   aboutMeBody: string[]
