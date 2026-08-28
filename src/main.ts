@@ -58,12 +58,14 @@ function renderRoute(route: Route): string {
 }
 
 function App(route: Route): string {
+  const logoSrc = `${import.meta.env.BASE_URL}ac-logo.svg`
+
   return `
   <main class="relative isolate min-h-screen overflow-hidden bg-stone-950 text-stone-100">
     <div class="top-brand fixed left-4 top-4 z-50 flex items-center gap-3 sm:left-6 sm:top-6 sm:gap-4">
       <a href="#/" aria-label="Home" class="home-fab inline-flex items-center rounded-2xl border p-0 sm:p-0.5">
         <span class="home-fab-logo-wrap inline-flex h-16 w-16 items-center justify-center rounded-xl sm:h-20 sm:w-20">
-          <img src="/ac-logo.svg" alt="AC logo" class="h-[3.6rem] w-[3.6rem] sm:h-[4.5rem] sm:w-[4.5rem]" />
+          <img src="${logoSrc}" alt="AC logo" class="h-[3.6rem] w-[3.6rem] sm:h-[4.5rem] sm:w-[4.5rem]" />
         </span>
       </a>
       <span class="top-brand-name whitespace-nowrap text-base font-black tracking-tight sm:text-xl">Sudo-rm-me (aka Alex)</span>
