@@ -1,6 +1,8 @@
 import { blogData, blogsText, getBlogPostBySlug } from '../../data/blogData'
 
 export function BlogsPage(): string {
+  const summaryTypewriterStyle = `--typewriter-ch: ${blogsText.summary.length}; --typewriter-delay: 0.2s; --typewriter-duration: 2s;`
+
   const cards = blogData
     .map(
       (post) => `
@@ -21,10 +23,12 @@ export function BlogsPage(): string {
 
   return `
     <section class="rise-in mt-10 rounded-2xl border border-violet-400/30 bg-stone-900/80 p-6">
-      <h2 class="text-2xl font-bold text-violet-100">${blogsText.title}</h2>
-      <p class="mt-3 text-stone-300">${blogsText.summary}</p>
+      <div class="flex items-center justify-between gap-4">
+        <h2 class="text-2xl font-bold text-violet-100">${blogsText.title}</h2>
+        <a href="#/" class="inline-flex rounded-lg border border-violet-300/40 px-4 py-2 text-sm font-semibold text-violet-100 transition hover:bg-violet-300/10">${blogsText.backHomeLabel}</a>
+      </div>
+      <p class="mt-3 typewriter-text text-stone-300" style="${summaryTypewriterStyle}">${blogsText.summary}</p>
       <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">${cards}</div>
-      <a href="#/" class="mt-6 inline-flex rounded-lg border border-violet-300/40 px-4 py-2 text-sm font-semibold text-violet-100 transition hover:bg-violet-300/10">${blogsText.backHomeLabel}</a>
     </section>
   `
 }

@@ -2,7 +2,7 @@ import { featureGridText, type FeatureText } from '../data/textData'
 
 function FeatureCard({ title, colorClass, shadowClass, description, href }: FeatureText): string {
   return `
-    <a href="${href}" class="group rounded-2xl border border-stone-700/70 bg-stone-900/75 p-5 transition hover:-translate-y-0.5 hover:border-cyan-300/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 ${shadowClass}">
+    <a href="${href}" class="group rounded-2xl border border-stone-700/70 bg-stone-900/75 p-5 transition hover:-translate-y-0.5 hover:border-violet-300/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300/80 ${shadowClass}">
       <h2 class="text-sm font-semibold uppercase tracking-[0.14em] ${colorClass}">${title}</h2>
       <p class="mt-2 text-stone-300">${description}</p>
     </a>

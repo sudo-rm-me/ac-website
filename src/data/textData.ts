@@ -23,31 +23,31 @@ export type HeroSectionText = {
 }
 
 export const heroSectionText: HeroSectionText = {
-  badge: 'Made with love in TypeScript + Tailwind v4',
-  heading: 'Sudo-rm-me',
+  badge: 'Made with love in TypeScript',
+  heading: 'Sudo-rm-me (aka Alex)',
   intro: 'Welcome to my website. I hope you enjoy your stay.',
 }
 
 export const featureGridText: FeatureText[] = [
   {
-    title: 'Personal History',
+    title: 'About Me',
     description: 'A little about me...',
-    href: '#/personal-history',
+    href: '#/about-me',
     colorClass: 'text-emerald-200',
     shadowClass: 'shadow-[0_10px_40px_-18px_rgba(16,185,129,0.7)]',
   },
   {
     title: 'Tech Stack',
-    description: 'Technologies and tools I use in my projects.',
+    description: 'Technologies and systems I work with.',
     href: '#/tech-stack',
-    colorClass: 'text-amber-200',
-    shadowClass: 'shadow-[0_10px_40px_-18px_rgba(251,191,36,0.7)]',
+    colorClass: 'text-sky-200',
+    shadowClass: 'shadow-[0_10px_40px_-18px_rgba(56,189,248,0.7)]',
   },
   {
     title: 'Blogs',
-    description: 'Writing, notes, and lessons learned.',
+    description: 'Boring insights into nothing interesting.',
     href: '#/blogs',
-    colorClass: 'text-violet-200',
-    shadowClass: 'shadow-[0_10px_40px_-18px_rgba(167,139,250,0.8)]',
+    colorClass: 'text-rose-200',
+    shadowClass: 'shadow-[0_10px_40px_-18px_rgba(244,63,94,0.65)]',
   },
 ]

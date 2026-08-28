@@ -1,7 +1,16 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap');
 
 :root {
-  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+}
+
+h1,
+h2,
+h3,
+.top-brand-name {
+  font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.01em;
 }
 
 @keyframes riseIn {
@@ -59,4 +68,225 @@ body {
   animation:
     typewriter var(--typewriter-duration) steps(var(--typewriter-ch), end) var(--typewriter-delay) forwards,
     caretBlink 0.75s step-end calc(var(--typewriter-delay) + var(--typewriter-duration)) infinite;
+}
+
+@keyframes techPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes techCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes homeFabFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes homeFabSweep {
+  from {
+    transform: translateX(-130%) skewX(-24deg);
+  }
+
+  to {
+    transform: translateX(180%) skewX(-24deg);
+  }
+}
+
+@keyframes homeFabPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 16px 40px -20px rgb(139 92 246 / 0.8),
+      inset 0 1px 0 rgb(255 255 255 / 0.22);
+  }
+
+  50% {
+    box-shadow:
+      0 18px 46px -18px rgb(59 130 246 / 0.72),
+      inset 0 1px 0 rgb(255 255 255 / 0.32);
+  }
+}
+
+@keyframes brandNameGlow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 14px rgb(167 139 250 / 0.45),
+      0 0 28px rgb(56 189 248 / 0.2);
+    transform: translateY(0);
+  }
+
+  50% {
+    text-shadow:
+      0 0 18px rgb(196 181 253 / 0.75),
+      0 0 34px rgb(45 212 191 / 0.3);
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes brandNameSheen {
+  from {
+    background-position: -180% 0;
+  }
+
+  to {
+    background-position: 220% 0;
+  }
+}
+
+.home-fab {
+  isolation: isolate;
+  overflow: hidden;
+  border-color: rgb(196 181 253 / 0.6);
+  background: linear-gradient(135deg, rgb(28 25 23 / 0.92), rgb(15 23 42 / 0.9));
+  color: rgb(245 243 255);
+  backdrop-filter: blur(8px);
+  animation:
+    homeFabFloat 3.2s ease-in-out infinite,
+    homeFabPulse 2.8s ease-in-out infinite;
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.home-fab::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 35%, rgb(255 255 255 / 0.22) 50%, transparent 64%);
+  opacity: 0.7;
+  transform: translateX(-130%) skewX(-24deg);
+  animation: homeFabSweep 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.home-fab:hover {
+  border-color: rgb(216 180 254 / 0.92);
+  background: linear-gradient(135deg, rgb(76 29 149 / 0.52), rgb(30 64 175 / 0.42));
+}
+
+.home-fab:focus-visible {
+  outline: 2px solid rgb(125 211 252 / 0.9);
+  outline-offset: 3px;
+}
+
+.home-fab-logo-wrap {
+  border: 1px solid rgb(196 181 253 / 0.35);
+  background: rgb(28 25 23 / 0.72);
+}
+
+.home-fab-label {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 20px rgb(139 92 246 / 0.45);
+}
+
+.top-brand-name {
+  color: rgb(237 233 254);
+  letter-spacing: 0.01em;
+  background: linear-gradient(90deg, rgb(224 231 255), rgb(196 181 253), rgb(125 211 252), rgb(224 231 255));
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:
+    brandNameGlow 3.4s ease-in-out infinite,
+    brandNameSheen 5.2s linear infinite;
+}
+
+.tech-tab {
+  position: relative;
+  border-color: rgb(167 139 250 / 0.35);
+  background: linear-gradient(135deg, rgb(41 37 36 / 0.78), rgb(24 24 27 / 0.72));
+  color: rgb(214 211 209 / 0.95);
+  backdrop-filter: blur(4px);
+}
+
+.tech-tab:hover {
+  border-color: rgb(216 180 254 / 0.65);
+  background: linear-gradient(120deg, rgb(88 28 135 / 0.3), rgb(30 64 175 / 0.22));
+  color: rgb(245 243 255);
+}
+
+.tech-tab-active {
+  border-color: rgb(196 181 253 / 0.9);
+  background: linear-gradient(120deg, rgb(124 58 237 / 0.5), rgb(190 24 93 / 0.34));
+  color: rgb(250 245 255);
+  box-shadow:
+    0 8px 22px -14px rgb(167 139 250 / 0.75),
+    inset 0 1px 0 rgb(255 255 255 / 0.25);
+}
+
+.tech-tab-active::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: -1px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgb(192 132 252), rgb(56 189 248), rgb(74 222 128));
+}
+
+.tech-panel-enter {
+  animation: techPanelIn 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.tech-panel-enter .tech-item-card {
+  animation: techCardIn 0.36s ease-out both;
+  animation-delay: calc(var(--card-index, 0) * 40ms);
+}
+
+.tech-tabs-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(167 139 250 / 0.45) transparent;
+}
+
+.tech-tabs-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tech-tabs-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tech-tabs-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgb(167 139 250 / 0.55), rgb(56 189 248 / 0.45));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-fab,
+  .home-fab::before,
+  .top-brand-name,
+  .tech-panel-enter,
+  .tech-panel-enter .tech-item-card,
+  .tech-tab {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
 }
