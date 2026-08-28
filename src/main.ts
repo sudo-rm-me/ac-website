@@ -68,15 +68,6 @@ function App(route: Route): string {
 
   return `
   <main class="relative isolate min-h-screen overflow-hidden bg-stone-950 text-stone-100">
-    <div class="top-brand fixed left-4 top-4 z-50 flex items-center gap-3 sm:left-6 sm:top-6 sm:gap-4">
-      <a href="#/" aria-label="Home" class="home-fab inline-flex items-center rounded-2xl border p-0 sm:p-0.5">
-        <span class="home-fab-logo-wrap inline-flex h-16 w-16 items-center justify-center rounded-xl sm:h-20 sm:w-20">
-          <img src="${logoSrc}" alt="AC logo" class="h-[3.6rem] w-[3.6rem] sm:h-[4.5rem] sm:w-[4.5rem]" />
-        </span>
-      </a>
-      <span class="top-brand-name whitespace-nowrap text-base font-black tracking-tight sm:text-xl">Sudo-rm-me (aka Alex)</span>
-    </div>
-
     <div class="pointer-events-none absolute -left-24 top-0 h-80 w-80 rounded-full bg-violet-500/25 blur-3xl"></div>
     <div class="pointer-events-none absolute left-[22%] top-[52%] h-72 w-72 rounded-full bg-sky-400/18 blur-3xl"></div>
     <div class="pointer-events-none absolute right-[18%] top-[18%] h-72 w-72 rounded-full bg-emerald-400/14 blur-3xl"></div>
