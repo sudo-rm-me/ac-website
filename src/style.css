@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0ch;
+  }
+
+  to {
+    width: calc(var(--typewriter-ch) * 1ch);
+  }
+}
+
+@keyframes caretBlink {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.rise-in {
+  animation: riseIn 0.7s ease-out both;
+}
+
+.typewriter-text {
+  --typewriter-ch: 48;
+  --typewriter-delay: 0.6s;
+  --typewriter-duration: 3s;
+
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  width: 0ch;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid rgb(231 229 228 / 0.9);
+  animation:
+    typewriter var(--typewriter-duration) steps(var(--typewriter-ch), end) var(--typewriter-delay) forwards,
+    caretBlink 0.75s step-end calc(var(--typewriter-delay) + var(--typewriter-duration)) infinite;
+}

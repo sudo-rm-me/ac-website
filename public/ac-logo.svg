@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="acTitle acDesc">
+  <title id="acTitle">AC logo</title>
+  <desc id="acDesc">Stylized AC monogram inside a gradient ring.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="monoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="256" height="256" rx="56" fill="url(#bgGrad)"/>
+  <circle cx="128" cy="128" r="94" fill="none" stroke="url(#ringGrad)" stroke-width="12"/>
+
+  <path d="M74 176L110 78L146 176" fill="none" stroke="url(#monoGrad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M91 142H129" fill="none" stroke="url(#monoGrad)" stroke-width="12" stroke-linecap="round"/>
+
+  <path d="M190 93c-10-12-24-19-39-19-29 0-53 24-53 54s24 54 53 54c15 0 29-7 39-19" fill="none" stroke="url(#monoGrad)" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="189" cy="128" r="5" fill="#22d3ee"/>
+</svg>
