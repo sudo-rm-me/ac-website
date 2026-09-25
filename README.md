@@ -1,56 +1,68 @@
 # ac-website
 
-Personal website built with Vite + TypeScript + Tailwind CSS v4, using hash-based routing and data-driven pages.
+Personal portfolio and services site for Alex (`sudo-rm-me`). Vite + TypeScript + Tailwind CSS v4, path-based SPA routing, data-driven pages. Deployed to GitHub Pages.
 
 ## Scripts
 
-- `pnpm dev` - start the local dev server
-- `pnpm build` - type-check and build production assets
-- `pnpm preview` - preview the production build
-- `pnpm lint` - run ESLint
-- `pnpm lint:fix` - run ESLint with autofix
-- `pnpm format` - format files with Prettier
-- `pnpm format:check` - check formatting without writing changes
+- `pnpm dev` — local server on port 9999
+- `pnpm build` — type-check and production build (emits `404.html`, `rss.xml`, `sitemap.xml`, `robots.txt`)
+- `pnpm preview` — preview the production build
+- `pnpm lint` / `pnpm lint:fix` — ESLint
+- `pnpm format` / `pnpm format:check` — Prettier
 
 ## Stack
 
 - Vite 8
 - TypeScript 6
-- Tailwind CSS 4 (via `@tailwindcss/vite`)
+- Tailwind CSS 4 (`@tailwindcss/vite`)
+- Self-hosted fonts via `@fontsource/instrument-sans` and `@fontsource/sora`
 - pnpm
 
-## App Structure
+## Routes
 
-- `src/main.ts` - app entry and hash router
-- `src/components/heroSection.ts` - hero section with typewriter intro
-- `src/components/featureGrid.ts` - home navigation cards
-- `src/pages/personal-history/personalHistoryPage.ts` - personal history page
-- `src/pages/tech-stack/techStackPage.ts` - tech stack page
-- `src/pages/blogs/blogsPage.ts` - blogs index + dynamic post page renderer
+- `/` — home
+- `/about-me` — positioning + bio
+- `/work` — case studies with tag filters
+- `/work/:slug` — case study detail
+- `/service-offerings` — interactive service catalogue + enquire CTAs
+- `/tech-stack` — tabbed tooling overview
+- `/blogs` — blog index
+- `/blogs/:slug` — post
+- `/contact` — contact form (`?service=` prefills interest)
+- `/rss.xml` — blog feed
+- `/sitemap.xml` / `/robots.txt` — SEO
 
-## Data Files
+Legacy hash URLs such as `#/about-me` redirect to path URLs on load.
 
-- `src/data/textData.ts` - shared hero/feature text and shared types
-- `src/data/personalHistoryData.ts` - personal history page content
-- `src/data/techStackData.ts` - tech stack categories, items, and SVG icon paths
-- `src/data/blogData.ts` - blog post data and slug lookup helpers
+## Fun extras
 
-## Routing
+- **Theme toggle** (top-right) — light/dark with a left-to-right wipe; preference saved in `localStorage`
+- **Latency pet** (bottom-right) — click to open the terminal; health rises as you browse
+- **Terminal overlay** — press `` ` `` (backtick); guest shell with safe allowlisted commands (`help`, `open work`, `neofetch`, …)
 
-Uses hash-based routing in `src/main.ts`:
+## App structure
 
-- `#/` - home
-- `#/personal-history` - personal history page
-- `#/tech-stack` - tech stack page
-- `#/blogs` - blog cards page
-- `#/blogs/:slug` - dynamic blog post page
+- `src/main.ts` — entry, layout shell, route render
+- `src/lib/` — router, paths, meta/OG, contact form, theme, terminal, latency pet
+- `src/components/` — home hero + feature grid
+- `src/pages/` — route page renderers and interaction inits
+- `src/data/` — page copy and structured content
 
-## Branding Assets
+## Production env
 
-- `public/ac-logo.svg` - custom AC logo SVG
-- `public/ac-logo.png` - PNG export of the same logo
-- `index.html` uses `public/ac-logo.svg` as the favicon
+Optional GitHub Actions variable / local `.env`:
+
+| Name | Purpose |
+|------|---------|
+| `VITE_SITE_URL` | Absolute site origin for OG tags, RSS, sitemap (e.g. `https://USER.github.io/ac-website`) |
+
+The contact form opens the visitor’s email client via `mailto:`.
+
+## Branding
+
+- `public/ac-logo.svg` — favicon / logo
+- `public/og-share.png` — Open Graph / Twitter share image
 
 ## Deployment
 
-GitHub Pages workflow is in `.github/workflows/deploy-pages.yml` and deploys `dist` on pushes to `main`.
+`.github/workflows/deploy-pages.yml` builds with `base` set to `/<repo>/` and publishes `dist`. The build copies `index.html` to `404.html` so deep links work on GitHub Pages.

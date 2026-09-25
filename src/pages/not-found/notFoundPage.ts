@@ -1,3 +1,5 @@
+import { appPath } from '../../lib/paths'
+
 export function NotFoundPage(): string {
   return `
     <section class="rise-in mt-10 rounded-2xl border border-violet-300/35 bg-gradient-to-br from-stone-900/90 via-stone-900/85 to-slate-900/80 p-6 shadow-[0_20px_60px_-30px_rgba(56,189,248,0.45)] sm:p-8">
@@ -9,7 +11,8 @@ export function NotFoundPage(): string {
         The page you requested does not exist or may have moved. Try returning home and navigating from there.
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
-        <a href="#/" class="inline-flex rounded-xl border border-violet-300/45 bg-violet-300/10 px-4 py-2 text-sm font-semibold text-violet-100 transition hover:border-cyan-300/60 hover:bg-cyan-300/15 hover:text-cyan-100">Back home</a>
+        <a href="${appPath('/')}" class="inline-flex rounded-xl border border-violet-300/45 bg-violet-300/10 px-4 py-2 text-sm font-semibold text-violet-100 transition hover:border-cyan-300/60 hover:bg-cyan-300/15 hover:text-cyan-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/80">Back home</a>
+        <a href="${appPath('/contact')}" class="inline-flex rounded-xl border border-stone-600/70 px-4 py-2 text-sm font-semibold text-stone-200 transition hover:border-rose-300/50 hover:bg-rose-300/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300/70">Contact</a>
       </div>
     </section>
   `
