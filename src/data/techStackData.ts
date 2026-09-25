@@ -61,13 +61,13 @@ export const techStackData: TechStackData = {
           name: 'Bash',
           summary: 'Shell scripting for automation, deployment helpers, and developer workflows.',
           iconPath: 'M6 8h20v16H6z M11 12l4 4-4 4 M17 20h5',
-          iconAccentClass: 'text-lime-300',
+          iconAccentClass: 'text-emerald-300',
         },
         {
           name: 'SQL',
           summary: 'Querying, modeling, and optimizing relational data structures.',
           iconPath: 'M16 6c6 0 10 2 10 4s-4 4-10 4-10-2-10-4 4-4 10-4zm-10 8v4c0 2 4 4 10 4s10-2 10-4v-4c-2 2-6 3-10 3s-8-1-10-3zm0 7v3c0 2 4 4 10 4s10-2 10-4v-3c-2 2-6 3-10 3s-8-1-10-3z',
-          iconAccentClass: 'text-amber-300',
+          iconAccentClass: 'text-rose-300',
         },
         {
           name: 'PowerShell',
@@ -164,7 +164,7 @@ export const techStackData: TechStackData = {
           name: 'Svelte',
           summary: 'Compiler-based UI development for lightweight, highly reactive interfaces.',
           iconPath: 'M16 7c4 0 6 2 6 5-1 2-3 3-6 3-2 0-3 1-3 2s1 2 3 2c2 0 3-1 4-2l3 2c-1 3-4 5-8 5-4 0-7-2-7-6 0-3 2-5 6-5 2 0 3-1 3-2s-1-2-2-2c-2 0-3 1-4 2l-3-2c1-3 4-4 8-4z',
-          iconAccentClass: 'text-orange-300',
+          iconAccentClass: 'text-cyan-300',
         },
         {
           name: 'Bootstrap',
@@ -201,7 +201,7 @@ export const techStackData: TechStackData = {
           name: 'Git',
           summary: 'Branching, rebasing, and release workflows for collaborative development.',
           iconPath: 'M10 6l16 16-8 8L2 14l8-8zm5 7a2 2 0 10-1.8 2.8V20a2 2 0 101.6 0v-4.2A2 2 0 0015 13z',
-          iconAccentClass: 'text-orange-300',
+          iconAccentClass: 'text-cyan-300',
         },
         {
           name: 'GitHub Pages',
@@ -237,7 +237,7 @@ export const techStackData: TechStackData = {
           name: 'esbuild',
           summary: 'Fast TypeScript and JavaScript transforms for local build acceleration.',
           iconPath: 'M7 8h18l-4 8 4 8H7l4-8-4-8zm7 4l-2 4 2 4h4l-2-4 2-4h-4z',
-          iconAccentClass: 'text-amber-300',
+          iconAccentClass: 'text-rose-300',
         },
         {
           name: 'Rollup',
@@ -249,7 +249,7 @@ export const techStackData: TechStackData = {
           name: 'GitLab CI',
           summary: 'Pipeline automation and environment promotion for continuous delivery.',
           iconPath: 'M8 20l8-14 8 14-8 7-8-7zm4-2h8l-4-7-4 7z',
-          iconAccentClass: 'text-orange-300',
+          iconAccentClass: 'text-cyan-300',
         },
       ],
     },
@@ -291,7 +291,7 @@ export const techStackData: TechStackData = {
           name: 'Azure Functions',
           summary: 'Serverless workloads for event-driven APIs and background processing.',
           iconPath: 'M8 7h16v5H14l6 13h-4l-6-13H8V7z',
-          iconAccentClass: 'text-amber-300',
+          iconAccentClass: 'text-rose-300',
         },
         {
           name: 'Azure Monitor',
@@ -303,7 +303,7 @@ export const techStackData: TechStackData = {
           name: 'Azure Key Vault',
           summary: 'Centralized secret management and certificate lifecycle controls.',
           iconPath: 'M8 14h16v11H8V14zm3-4a5 5 0 1110 0v2h-2v-2a3 3 0 10-6 0v2h-2v-2z M16 18a2 2 0 00-1 3.7V23h2v-1.3A2 2 0 0016 18z',
-          iconAccentClass: 'text-amber-300',
+          iconAccentClass: 'text-rose-300',
         },
         {
           name: 'Azure App Service',
@@ -345,7 +345,7 @@ export const techStackData: TechStackData = {
           name: 'Cloudflare',
           summary: 'DNS, CDN, and edge security capabilities for fast and resilient delivery.',
           iconPath: 'M9 21h13a4 4 0 001-7.8A6 6 0 0011 11a5 5 0 00-5 5 5 5 0 003 5z',
-          iconAccentClass: 'text-orange-300',
+          iconAccentClass: 'text-cyan-300',
         },
       ],
     },
@@ -411,7 +411,7 @@ export const techStackData: TechStackData = {
           name: 'Power BI',
           summary: 'Dashboarding and analytics for operational visibility and reporting.',
           iconPath: 'M7 24h18v2H7z M9 20h3v4H9v-4zm5-5h3v9h-3v-9zm5-3h3v12h-3V12z',
-          iconAccentClass: 'text-amber-300',
+          iconAccentClass: 'text-rose-300',
         },
         {
           name: 'OneDrive',
@@ -483,7 +483,7 @@ export const techStackData: TechStackData = {
           name: 'Lighthouse',
           summary: 'Performance and accessibility audits to improve frontend quality.',
           iconPath: 'M16 5l4 7h-8l4-7zm-2 8h4v9h-4v-9zm-5 10h14v2H9z',
-          iconAccentClass: 'text-amber-300',
+          iconAccentClass: 'text-rose-300',
         },
         {
           name: 'Jest',
@@ -519,7 +519,7 @@ export const techStackData: TechStackData = {
           name: 'OWASP ZAP',
           summary: 'Security testing and automated vulnerability scanning for web applications.',
           iconPath: 'M16 6l4 8h-3l2 12h-6l2-9h-3l4-11z',
-          iconAccentClass: 'text-amber-300',
+          iconAccentClass: 'text-rose-300',
         },
       ],
     },
@@ -549,7 +549,7 @@ export const techStackData: TechStackData = {
           name: 'Grafana',
           summary: 'Operational dashboards and alert-focused monitoring for service health.',
           iconPath: 'M16 7c5 0 9 4 9 9s-4 9-9 9-9-4-9-9 4-9 9-9zm0 4a5 5 0 105 5 5 5 0 00-5-5zm-7-2l2 3M23 9l-2 3',
-          iconAccentClass: 'text-orange-300',
+          iconAccentClass: 'text-cyan-300',
         },
         {
           name: 'MongoDB',
@@ -567,7 +567,7 @@ export const techStackData: TechStackData = {
           name: 'Prometheus',
           summary: 'Metrics collection and alerting for observable distributed systems.',
           iconPath: 'M16 7l7 4v10l-7 4-7-4V11l7-4zm0 4l-3 2v4l3 2 3-2v-4l-3-2z M16 4v3 M6 16h3 M23 16h3 M10 8l2 2 M20 8l-2 2',
-          iconAccentClass: 'text-orange-300',
+          iconAccentClass: 'text-cyan-300',
         },
         {
           name: 'OpenTelemetry',
@@ -591,7 +591,7 @@ export const techStackData: TechStackData = {
           name: 'Linux',
           summary: 'Command-line administration, process management, and service hardening workflows.',
           iconPath: 'M16 6c4 0 7 4 7 9 0 6-3 11-7 11s-7-5-7-11c0-5 3-9 7-9zm-2 7a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zm4 0a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0z M12 19c1 1 2.5 1.5 4 1.5s3-.5 4-1.5',
-          iconAccentClass: 'text-yellow-300',
+          iconAccentClass: 'text-sky-300',
         },
         {
           name: 'Windows Server',

@@ -7,17 +7,17 @@ function caseStudyCard(study: (typeof caseStudies)[number], index: number): stri
       href="${appPath(`/work/${study.slug}`)}"
       data-work-card
       data-work-tags="${study.tags.join(',')}"
-      class="rise-in group block rounded-2xl border border-amber-300/30 bg-stone-900/70 p-5 transition hover:-translate-y-0.5 hover:border-amber-300/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70"
+      class="rise-in group block rounded-2xl border border-emerald-300/30 bg-stone-900/70 p-5 transition hover:-translate-y-0.5 hover:border-emerald-300/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/70"
       style="animation-delay: ${120 + index * 70}ms"
     >
       <div class="flex flex-wrap items-center justify-between gap-2">
-        <span class="text-xs font-semibold uppercase tracking-[0.14em] text-amber-200">${study.role}</span>
+        <span class="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-200">${study.role}</span>
         <span class="text-xs text-stone-400">${study.timeframe}</span>
       </div>
-      <h3 class="mt-3 text-lg font-bold text-amber-50">${study.title}</h3>
+      <h3 class="mt-3 text-lg font-bold text-emerald-50">${study.title}</h3>
       <p class="mt-2 text-sm text-stone-300">${study.summary}</p>
       <div class="mt-4 flex flex-wrap gap-2">
-        ${study.tags.map((tag) => `<span class="rounded bg-amber-300/15 px-2 py-1 text-xs text-amber-100">${tag}</span>`).join('')}
+        ${study.tags.map((tag) => `<span class="rounded bg-emerald-300/15 px-2 py-1 text-xs text-emerald-100">${tag}</span>`).join('')}
       </div>
     </a>
   `
@@ -38,14 +38,14 @@ export function WorkPage(): string {
   const cards = caseStudies.map((study, index) => caseStudyCard(study, index)).join('')
 
   return `
-    <section data-work-root class="rise-in mt-10 rounded-2xl border border-amber-400/30 bg-stone-900/80 p-6">
+    <section data-work-root class="rise-in mt-10 rounded-2xl border border-emerald-400/30 bg-stone-900/80 p-6">
       <div class="flex items-center justify-between gap-4">
-        <h2 class="text-2xl font-bold text-amber-100">${workPageText.title}</h2>
-        <a href="${appPath('/')}" class="inline-flex rounded-lg border border-amber-300/40 px-4 py-2 text-sm font-semibold text-amber-100 transition hover:bg-amber-300/10">${workPageText.backHomeLabel}</a>
+        <h2 class="text-2xl font-bold text-emerald-100">${workPageText.title}</h2>
+        <a href="${appPath('/')}" class="inline-flex rounded-lg border border-emerald-300/40 px-4 py-2 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-300/10">${workPageText.backHomeLabel}</a>
       </div>
       <p class="mt-3 typewriter-text text-stone-300" style="${summaryTypewriterStyle}">${workPageText.summary}</p>
       <p class="mt-4 text-sm leading-relaxed text-stone-300">${workPageText.intro}</p>
-      <div class="mt-5 h-px w-full bg-gradient-to-r from-transparent via-amber-300/40 to-transparent"></div>
+      <div class="mt-5 h-px w-full bg-gradient-to-r from-transparent via-emerald-300/40 to-transparent"></div>
       <div class="mt-5" role="group" aria-label="Filter case studies by tag">
         <p class="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-stone-400">Filter</p>
         <div class="flex flex-wrap gap-2">${filters}</div>
@@ -70,26 +70,26 @@ export function WorkCasePage(slug: string): string {
   }
 
   return `
-    <article class="rise-in mt-10 rounded-2xl border border-amber-400/30 bg-stone-900/80 p-6">
-      <a href="${appPath('/work')}" class="inline-flex rounded-lg border border-amber-300/40 px-4 py-2 text-sm font-semibold text-amber-100 transition hover:bg-amber-300/10">Back to work</a>
-      <p class="mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-amber-200">${study.role} · ${study.timeframe}</p>
-      <h2 class="mt-2 text-3xl font-black text-amber-50">${study.title}</h2>
+    <article class="rise-in mt-10 rounded-2xl border border-emerald-400/30 bg-stone-900/80 p-6">
+      <a href="${appPath('/work')}" class="inline-flex rounded-lg border border-emerald-300/40 px-4 py-2 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-300/10">Back to work</a>
+      <p class="mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-200">${study.role} · ${study.timeframe}</p>
+      <h2 class="mt-2 text-3xl font-black text-emerald-50">${study.title}</h2>
       <p class="mt-3 text-stone-300">${study.summary}</p>
       <div class="mt-4 flex flex-wrap gap-2">
-        ${study.tags.map((tag) => `<span class="rounded bg-amber-300/15 px-2 py-1 text-xs text-amber-100">${tag}</span>`).join('')}
+        ${study.tags.map((tag) => `<span class="rounded bg-emerald-300/15 px-2 py-1 text-xs text-emerald-100">${tag}</span>`).join('')}
       </div>
-      <div class="mt-6 h-px w-full bg-gradient-to-r from-transparent via-amber-300/40 to-transparent"></div>
-      <h3 class="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-amber-100/90">Problem</h3>
+      <div class="mt-6 h-px w-full bg-gradient-to-r from-transparent via-emerald-300/40 to-transparent"></div>
+      <h3 class="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-emerald-100/90">Problem</h3>
       <p class="mt-2 leading-relaxed text-stone-200">${study.problem}</p>
-      <h3 class="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-amber-100/90">Approach</h3>
+      <h3 class="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-emerald-100/90">Approach</h3>
       <ul class="mt-2 list-disc space-y-2 pl-5 text-stone-200">
         ${study.approach.map((item) => `<li>${item}</li>`).join('')}
       </ul>
-      <h3 class="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-amber-100/90">Outcome</h3>
+      <h3 class="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-emerald-100/90">Outcome</h3>
       <ul class="mt-2 list-disc space-y-2 pl-5 text-stone-200">
         ${study.outcome.map((item) => `<li>${item}</li>`).join('')}
       </ul>
-      <a href="${appPath(`/contact?service=${encodeURIComponent(study.enquireService)}`)}" class="mt-8 inline-flex rounded-xl border border-amber-200/50 bg-amber-300/10 px-4 py-2 text-sm font-semibold text-amber-50 transition hover:bg-amber-300/20">Enquire about similar work</a>
+      <a href="${appPath(`/contact?service=${encodeURIComponent(study.enquireService)}`)}" class="mt-8 inline-flex rounded-xl border border-emerald-200/50 bg-emerald-300/10 px-4 py-2 text-sm font-semibold text-emerald-50 transition hover:bg-emerald-300/20">Enquire about similar work</a>
     </article>
   `
 }

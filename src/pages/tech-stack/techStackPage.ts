@@ -40,9 +40,9 @@ export function TechStackPage(): string {
           aria-labelledby="tech-tab-${categoryIndex}"
           class="${categoryIndex === 0 ? 'block tech-panel-enter' : 'hidden'}"
         >
-          <div class="mb-5 flex flex-wrap items-start justify-between gap-3 rounded-2xl border border-violet-300/25 bg-gradient-to-r from-violet-500/10 via-sky-500/5 to-emerald-500/10 p-4">
+          <div class="mb-5 flex flex-wrap items-start justify-between gap-3 rounded-2xl border border-rose-300/25 bg-gradient-to-r from-rose-500/10 via-sky-500/5 to-emerald-500/10 p-4">
             <div>
-              <h3 class="text-xl font-black tracking-tight text-violet-100">${category.title}</h3>
+              <h3 class="text-xl font-black tracking-tight text-rose-100">${category.title}</h3>
               <p class="mt-1 text-sm text-stone-300">${category.description}</p>
             </div>
             <span class="rounded-full border border-sky-200/30 bg-sky-200/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-sky-100">
@@ -55,8 +55,8 @@ export function TechStackPage(): string {
               .map(
                 (item, itemIndex) => `
                   <article class="tech-item-card group/card relative overflow-hidden rounded-2xl border border-stone-700/70 bg-gradient-to-br from-stone-950 via-stone-900 to-stone-950 p-4 transition duration-300 hover:-translate-y-1 hover:border-rose-300/55" style="--card-index: ${itemIndex};">
-                    <div class="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-violet-300/10 blur-xl transition group-hover/card:bg-violet-300/20"></div>
-                    <div class="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-violet-300/40 to-transparent"></div>
+                    <div class="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-rose-300/10 blur-xl transition group-hover/card:bg-rose-300/20"></div>
+                    <div class="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-rose-300/40 to-transparent"></div>
                     <div class="flex items-center gap-3">
                       <svg viewBox="0 0 32 32" class="h-8 w-8 ${item.iconAccentClass}" aria-hidden="true" focusable="false" fill="currentColor">
                         <path d="${item.iconPath}"></path>
@@ -75,17 +75,17 @@ export function TechStackPage(): string {
     .join('')
 
   return `
-    <section data-tech-stack-root class="mt-10 w-full self-center rounded-3xl border border-violet-300/35 bg-gradient-to-b from-stone-900/90 via-stone-900/80 to-stone-950/85 p-6 shadow-[0_25px_80px_-35px_rgba(139,92,246,0.6)] sm:p-8 lg:p-10">
+    <section data-tech-stack-root class="mt-10 w-full self-center rounded-3xl border border-rose-300/35 bg-gradient-to-b from-stone-900/90 via-stone-900/80 to-stone-950/85 p-6 shadow-[0_25px_80px_-35px_rgba(244,63,94,0.55)] sm:p-8 lg:p-10">
       <div class="rise-in flex flex-wrap items-start justify-between gap-6">
         <div class="max-w-3xl">
           <p class="mb-3 inline-flex rounded-full border border-rose-200/30 bg-rose-200/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-rose-100">
             Tooling Overview
           </p>
-          <h2 class="text-3xl font-black text-violet-100 sm:text-4xl">${techStackData.title}</h2>
+          <h2 class="text-3xl font-black text-rose-100 sm:text-4xl">${techStackData.title}</h2>
           <p class="mt-3 typewriter-text text-stone-300 sm:text-lg" style="${summaryTypewriterStyle}">${techStackData.summary}</p>
         </div>
         <div class="rise-in flex flex-col items-stretch gap-3" style="animation-delay: 120ms">
-          <a href="${appPath('/')}" class="inline-flex self-end rounded-xl border border-violet-300/40 px-4 py-2 text-sm font-semibold text-violet-100 transition hover:bg-violet-300/10">${techStackData.backHomeLabel}</a>
+          <a href="${appPath('/')}" class="inline-flex self-end rounded-xl border border-rose-300/40 px-4 py-2 text-sm font-semibold text-rose-100 transition hover:bg-rose-300/10">${techStackData.backHomeLabel}</a>
           <div class="grid min-w-[280px] grid-cols-2 gap-3">
             <div class="rounded-xl border border-emerald-200/25 bg-emerald-200/10 px-4 py-3">
               <p class="text-xs uppercase tracking-[0.14em] text-emerald-100/80">Categories</p>
@@ -99,7 +99,7 @@ export function TechStackPage(): string {
         </div>
       </div>
 
-      <div class="mt-8 rounded-2xl border border-violet-300/20 bg-stone-950/50 p-3 sm:p-4">
+      <div class="mt-8 rounded-2xl border border-rose-300/20 bg-stone-950/50 p-3 sm:p-4">
         <p class="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-stone-400" id="tech-tabs-label">Browse Categories</p>
         <div class="tech-tabs-scroll flex gap-2 overflow-x-auto pb-1" role="tablist" aria-labelledby="tech-tabs-label">${tabButtons}</div>
       </div>

@@ -382,7 +382,7 @@ html[data-theme='light'] .app-orb-rose {
 
 .tech-tab {
   position: relative;
-  border-color: rgb(167 139 250 / 0.35);
+  border-color: rgb(251 113 133 / 0.4);
   background: linear-gradient(135deg, rgb(41 37 36 / 0.78), rgb(24 24 27 / 0.72));
   color: rgb(214 211 209 / 0.95);
   backdrop-filter: blur(4px);
@@ -394,16 +394,16 @@ html[data-theme='light'] .app-orb-rose {
 }
 
 .tech-tab:hover {
-  border-color: rgb(216 180 254 / 0.65);
-  background: linear-gradient(120deg, rgb(88 28 135 / 0.3), rgb(30 64 175 / 0.22));
-  color: rgb(245 243 255);
+  border-color: rgb(251 113 133 / 0.7);
+  background: linear-gradient(120deg, rgb(136 19 55 / 0.35), rgb(30 64 175 / 0.22));
+  color: rgb(255 241 242);
   transition-duration: 220ms;
 }
 
 .tech-tab-active {
-  border-color: rgb(216 180 254 / 0.65);
-  background: linear-gradient(120deg, rgb(88 28 135 / 0.3), rgb(30 64 175 / 0.22));
-  color: rgb(245 243 255);
+  border-color: rgb(251 113 133 / 0.7);
+  background: linear-gradient(120deg, rgb(136 19 55 / 0.35), rgb(30 64 175 / 0.22));
+  color: rgb(255 241 242);
   box-shadow: none;
   transition-duration: 220ms;
 }
@@ -416,7 +416,7 @@ html[data-theme='light'] .app-orb-rose {
   bottom: -1px;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgb(192 132 252), rgb(56 189 248), rgb(74 222 128));
+  background: linear-gradient(90deg, rgb(251 113 133), rgb(52 211 153), rgb(56 189 248), rgb(129 140 248), rgb(167 139 250));
 }
 
 .tech-panel-enter {
@@ -430,7 +430,7 @@ html[data-theme='light'] .app-orb-rose {
 
 .tech-tabs-scroll {
   scrollbar-width: thin;
-  scrollbar-color: rgb(167 139 250 / 0.45) transparent;
+  scrollbar-color: rgb(251 113 133 / 0.45) transparent;
 }
 
 .tech-tabs-scroll::-webkit-scrollbar {
@@ -443,7 +443,7 @@ html[data-theme='light'] .app-orb-rose {
 
 .tech-tabs-scroll::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  background: linear-gradient(90deg, rgb(167 139 250 / 0.55), rgb(56 189 248 / 0.45));
+  background: linear-gradient(90deg, rgb(251 113 133 / 0.55), rgb(56 189 248 / 0.45));
 }
 
 .service-offering-button {
@@ -503,42 +503,42 @@ html[data-theme='light'] .app-orb-rose {
 }
 
 .work-filter {
-  border-color: rgb(251 191 36 / 0.35);
+  border-color: rgb(110 231 183 / 0.4);
   background: rgb(28 25 23 / 0.72);
-  color: rgb(254 243 199 / 0.9);
+  color: rgb(209 250 229 / 0.95);
   transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
 }
 
 .work-filter:hover {
-  border-color: rgb(252 211 77 / 0.7);
-  background: rgb(120 53 15 / 0.35);
+  border-color: rgb(167 243 208 / 0.75);
+  background: rgb(6 78 59 / 0.4);
 }
 
 .work-filter:focus-visible {
-  outline: 2px solid rgb(252 211 77 / 0.9);
+  outline: 2px solid rgb(110 231 183 / 0.95);
   outline-offset: 2px;
 }
 
 .work-filter-active {
-  border-color: rgb(253 230 138 / 0.9);
-  background: linear-gradient(135deg, rgb(120 53 15 / 0.55), rgb(146 64 14 / 0.4));
-  color: rgb(255 251 235);
+  border-color: rgb(167 243 208 / 0.95);
+  background: linear-gradient(135deg, rgb(6 78 59 / 0.75), rgb(4 120 87 / 0.45));
+  color: rgb(236 253 245);
 }
 
 .contact-input {
   width: 100%;
   border-radius: 0.75rem;
-  border: 1px solid rgb(251 113 133 / 0.35);
+  border: 1px solid rgb(167 139 250 / 0.4);
   background: rgb(12 10 9 / 0.85);
   padding: 0.7rem 0.85rem;
-  color: rgb(255 241 242);
+  color: rgb(245 243 255);
   transition: border-color 160ms ease, box-shadow 160ms ease;
 }
 
 .contact-input:focus {
   outline: none;
-  border-color: rgb(251 113 133 / 0.8);
-  box-shadow: 0 0 0 3px rgb(251 113 133 / 0.2);
+  border-color: rgb(167 139 250 / 0.85);
+  box-shadow: 0 0 0 3px rgb(139 92 246 / 0.22);
 }
 
 .contact-status[data-state='success'] {
@@ -680,16 +680,16 @@ html[data-theme='light'] .home-fab-logo-wrap {
 }
 
 html[data-theme='light'] .tech-tab {
-  border-color: rgb(167 139 250 / 0.35);
-  background: linear-gradient(135deg, rgb(255 255 255 / 0.95), rgb(245 243 255 / 0.9));
-  color: rgb(55 48 107);
+  border-color: rgb(251 113 133 / 0.35);
+  background: linear-gradient(135deg, rgb(255 255 255 / 0.95), rgb(255 241 242 / 0.9));
+  color: rgb(136 19 55);
 }
 
 html[data-theme='light'] .tech-tab:hover,
 html[data-theme='light'] .tech-tab-active {
-  border-color: rgb(139 92 246 / 0.55);
-  background: linear-gradient(120deg, rgb(237 233 254 / 0.95), rgb(224 242 254 / 0.9));
-  color: rgb(46 16 101);
+  border-color: rgb(244 63 94 / 0.55);
+  background: linear-gradient(120deg, rgb(255 228 230 / 0.95), rgb(224 242 254 / 0.9));
+  color: rgb(136 19 55);
 }
 
 html[data-theme='light'] .service-offering-button {
@@ -720,22 +720,22 @@ html[data-theme='light'] .service-offering-example {
 }
 
 html[data-theme='light'] .work-filter {
-  border-color: rgb(217 119 6 / 0.35);
+  border-color: rgb(16 185 129 / 0.35);
   background: rgb(255 255 255 / 0.9);
-  color: rgb(120 53 15);
+  color: rgb(6 78 59);
 }
 
 html[data-theme='light'] .work-filter:hover,
 html[data-theme='light'] .work-filter-active {
-  border-color: rgb(245 158 11 / 0.7);
-  background: linear-gradient(135deg, rgb(254 243 199 / 0.95), rgb(254 215 170 / 0.9));
-  color: rgb(120 53 15);
+  border-color: rgb(52 211 153 / 0.7);
+  background: linear-gradient(135deg, rgb(209 250 229 / 0.95), rgb(167 243 208 / 0.9));
+  color: rgb(6 78 59);
 }
 
 html[data-theme='light'] .contact-input {
-  border-color: rgb(244 63 94 / 0.3);
+  border-color: rgb(139 92 246 / 0.3);
   background: rgb(255 255 255 / 0.95);
-  color: rgb(76 5 25);
+  color: rgb(46 16 101);
 }
 
 html[data-theme='light'] .contact-status[data-state='success'] {
@@ -770,13 +770,13 @@ html[data-theme='light'] .text-white {
   color: rgb(22 78 99);
 }
 
-html[data-theme='light'] .text-amber-100,
-html[data-theme='light'] .text-amber-50 {
-  color: rgb(120 53 15);
+html[data-theme='light'] .text-indigo-100,
+html[data-theme='light'] .text-indigo-50 {
+  color: rgb(55 48 163);
 }
 
-html[data-theme='light'] .text-amber-200 {
-  color: rgb(146 64 14);
+html[data-theme='light'] .text-indigo-200 {
+  color: rgb(67 56 202);
 }
 
 html[data-theme='light'] .text-rose-100,
@@ -812,7 +812,7 @@ html[data-theme='light'] .bg-cyan-900\/30 {
 html[data-theme='light'] .bg-emerald-300\/10,
 html[data-theme='light'] .bg-cyan-300\/10,
 html[data-theme='light'] .bg-violet-300\/10,
-html[data-theme='light'] .bg-amber-300\/10,
+html[data-theme='light'] .bg-indigo-300\/10,
 html[data-theme='light'] .bg-rose-300\/10,
 html[data-theme='light'] .bg-sky-300\/10 {
   background-color: rgb(255 255 255 / 0.7);
