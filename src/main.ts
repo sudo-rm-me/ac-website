@@ -43,10 +43,10 @@ function renderRoute(route: Route): string {
 function App(route: Route): string {
   return `
   <main class="app-shell relative isolate min-h-screen overflow-hidden">
-    <div class="app-orb app-orb-violet pointer-events-none absolute -left-24 top-0 h-80 w-80 rounded-full blur-3xl" aria-hidden="true"></div>
-    <div class="app-orb app-orb-sky pointer-events-none absolute left-[22%] top-[52%] h-72 w-72 rounded-full blur-3xl" aria-hidden="true"></div>
-    <div class="app-orb app-orb-emerald pointer-events-none absolute right-[18%] top-[18%] h-72 w-72 rounded-full blur-3xl" aria-hidden="true"></div>
-    <div class="app-orb app-orb-rose pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full blur-3xl" aria-hidden="true"></div>
+    <div class="app-orb app-orb-rose pointer-events-none absolute -left-24 top-0 h-80 w-80 rounded-full blur-3xl" aria-hidden="true"></div>
+    <div class="app-orb app-orb-emerald pointer-events-none absolute left-[22%] top-[52%] h-72 w-72 rounded-full blur-3xl" aria-hidden="true"></div>
+    <div class="app-orb app-orb-sky pointer-events-none absolute right-[18%] top-[18%] h-72 w-72 rounded-full blur-3xl" aria-hidden="true"></div>
+    <div class="app-orb app-orb-violet pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full blur-3xl" aria-hidden="true"></div>
 
     <section class="mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center px-6 py-16">
       ${renderRoute(route)}

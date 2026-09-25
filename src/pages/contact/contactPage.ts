@@ -13,13 +13,13 @@ export function ContactPage(): string {
   ].join('')
 
   return `
-    <section class="rise-in mt-10 rounded-2xl border border-rose-400/30 bg-stone-900/80 p-6">
+    <section class="rise-in mt-10 rounded-2xl border border-violet-400/30 bg-stone-900/80 p-6">
       <div class="flex items-center justify-between gap-4">
-        <h2 class="text-2xl font-bold text-rose-100">${contactPageText.title}</h2>
-        <a href="${appPath('/')}" class="inline-flex rounded-lg border border-rose-300/40 px-4 py-2 text-sm font-semibold text-rose-100 transition hover:bg-rose-300/10">${contactPageText.backHomeLabel}</a>
+        <h2 class="text-2xl font-bold text-violet-100">${contactPageText.title}</h2>
+        <a href="${appPath('/')}" class="inline-flex rounded-lg border border-violet-300/40 px-4 py-2 text-sm font-semibold text-violet-100 transition hover:bg-violet-300/10">${contactPageText.backHomeLabel}</a>
       </div>
       <p class="mt-3 typewriter-text text-stone-300" style="${summaryTypewriterStyle}">${contactPageText.summary}</p>
-      <div class="mt-5 h-px w-full bg-gradient-to-r from-transparent via-rose-300/40 to-transparent"></div>
+      <div class="mt-5 h-px w-full bg-gradient-to-r from-transparent via-violet-300/40 to-transparent"></div>
 
       <form data-contact-form class="contact-form mt-6 grid gap-4" novalidate>
         <label class="grid gap-1.5 text-sm text-stone-200">
@@ -42,7 +42,7 @@ export function ContactPage(): string {
           <textarea name="message" rows="5" required class="contact-input resize-y"></textarea>
         </label>
 
-        <button type="submit" class="inline-flex w-fit rounded-xl border border-rose-200/50 bg-rose-300/15 px-4 py-2 text-sm font-semibold text-rose-50 transition hover:bg-rose-300/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300/80 disabled:cursor-not-allowed disabled:opacity-60">
+        <button type="submit" class="inline-flex w-fit rounded-xl border border-violet-200/50 bg-violet-300/15 px-4 py-2 text-sm font-semibold text-violet-50 transition hover:bg-violet-300/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80 disabled:cursor-not-allowed disabled:opacity-60">
           ${contactPageText.submitLabel}
         </button>
         <p data-contact-status class="contact-status text-sm" role="status" aria-live="polite"></p>
