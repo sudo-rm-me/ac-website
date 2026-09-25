@@ -12,12 +12,7 @@ export type BasePageText = {
   backHomeLabel: string
 }
 
-export type ListPageText = BasePageText & {
-  items: string[]
-}
-
 export type HeroSectionText = {
   badge: string
   heading: string
-  enquiries: string
 }

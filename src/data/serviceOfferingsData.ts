@@ -10,6 +10,7 @@ export type ServiceOffering = {
 export type ServiceOfferingsData = BasePageText & {
   intro: string
   contactParagraph: string
+  enquireLabel: string
   offerings: ServiceOffering[]
 }
 
@@ -19,7 +20,8 @@ export const serviceOfferingsData: ServiceOfferingsData = {
   intro:
     'I provide affordable, tailored solutions based on your goals, timelines, and budget. Whether you need a focused one-off engagement or ongoing support, I shape each project to fit your specific needs rather than forcing a one-size-fits-all approach.',
   contactParagraph:
-    'If you would like to discuss your project requirements, timelines, or engagement options, please contact me at',
+    'If you would like to discuss your project requirements, timelines, or engagement options, use the contact form or email',
+  enquireLabel: 'Enquire about this service',
   offerings: [
     {
       title: 'Web App Development',
