@@ -139,18 +139,19 @@ export function applyRouteMeta(route: Route): void {
   const url = `${siteConfig.siteUrl}${appPath(path)}`.replace(/([^:]\/)\/+/g, '$1')
   const image = `${siteConfig.siteUrl}${appPath('/og-share.png')}`.replace(/([^:]\/)\/+/g, '$1')
 
-  document.title = meta.title
+  const tabTitle = siteConfig.titleDefault
+  document.title = tabTitle
 
   upsertMeta('meta[name="description"]', { name: 'description', content: meta.description })
   upsertMeta('meta[name="robots"]', { name: 'robots', content: meta.robots ?? 'index,follow' })
-  upsertMeta('meta[property="og:title"]', { property: 'og:title', content: meta.title })
+  upsertMeta('meta[property="og:title"]', { property: 'og:title', content: tabTitle })
   upsertMeta('meta[property="og:description"]', { property: 'og:description', content: meta.description })
   upsertMeta('meta[property="og:type"]', { property: 'og:type', content: 'website' })
   upsertMeta('meta[property="og:url"]', { property: 'og:url', content: url })
   upsertMeta('meta[property="og:image"]', { property: 'og:image', content: image })
   upsertMeta('meta[property="og:locale"]', { property: 'og:locale', content: siteConfig.locale })
   upsertMeta('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' })
-  upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: meta.title })
+  upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: tabTitle })
   upsertMeta('meta[name="twitter:description"]', { name: 'twitter:description', content: meta.description })
   upsertMeta('meta[name="twitter:image"]', { name: 'twitter:image', content: image })
   upsertLink('canonical', url)
