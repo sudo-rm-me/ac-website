@@ -1,5 +1,4 @@
 import { appPath } from './paths'
-import { getTheme, toggleThemeWithWipe } from './theme'
 import { getLatencyPetStats, pingLatencyPet } from './latencyPet'
 
 type TerminalApi = {
@@ -34,7 +33,6 @@ const COMMAND_HELP = [
   'ls                   list routes',
   'open <route>         go somewhere (work, blogs, …)',
   'ping / pet           poke or inspect the latency pet',
-  'theme                toggle light/dark',
   'uptime / date        session clock bits',
   'neofetch             fake system flex',
   'fortune / joke       free wisdom (quality not guaranteed)',
@@ -247,10 +245,6 @@ function runCommand(
       writeln(stats.health >= 80 ? 'mood: thriving' : stats.health >= 40 ? 'mood: caffeinated' : 'mood: needs deploys', 'term-muted')
       break
     }
-    case 'theme':
-      writeln(`switching theme (was ${getTheme()})`)
-      void toggleThemeWithWipe()
-      break
     case 'uptime':
       writeln(`session uptime ${formatUptime(Date.now() - startedAt)}`)
       break
@@ -264,7 +258,7 @@ function runCommand(
       writeln('OS: PortfolioOS (browser)')
       writeln(`Host: ${window.location.host || 'localhost'}`)
       writeln(`Shell: turtle-shell 0.1`)
-      writeln(`Theme: ${getTheme()}`)
+      writeln('Theme: dark')
       writeln(`Uptime: ${formatUptime(Date.now() - startedAt)}`)
       writeln('Packages: 0 (on purpose)')
       writeln('CPU: one tab, many intentions')
@@ -481,7 +475,13 @@ export function ensureTerminal(): TerminalApi {
     }
   }
 
+  const isCompactViewport = (): boolean => window.matchMedia('(max-width: 1023px)').matches
+
   const open = (): void => {
+    if (isCompactViewport()) {
+      return
+    }
+
     previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null
     root.hidden = false
     document.body.classList.add('term-open')
@@ -543,7 +543,14 @@ export function ensureTerminal(): TerminalApi {
       target instanceof HTMLElement &&
       (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)
 
-    if (event.key === '`' && !event.ctrlKey && !event.metaKey && !event.altKey && !typingInField) {
+    if (
+      event.key === '`' &&
+      !event.ctrlKey &&
+      !event.metaKey &&
+      !event.altKey &&
+      !typingInField &&
+      !isCompactViewport()
+    ) {
       event.preventDefault()
       toggle()
     }

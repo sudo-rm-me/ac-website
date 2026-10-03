@@ -11,13 +11,6 @@
   font-family: 'Instrument Sans', 'Segoe UI', sans-serif;
   --theme-page-bg: #0c0a09;
   --theme-page-fg: #f5f5f4;
-  --theme-wipe-dark: #0c0a09;
-  --theme-wipe-light: #f7f5f0;
-}
-
-html[data-theme='light'] {
-  --theme-page-bg: #f7f5f0;
-  --theme-page-fg: #1c1917;
 }
 
 h1,
@@ -55,21 +48,6 @@ h3 {
   }
 }
 
-@keyframes themeWipeAcross {
-  0% {
-    transform: translateX(-105%);
-  }
-
-  45%,
-  55% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(105%);
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -103,135 +81,6 @@ body {
   background: rgb(244 63 94 / 0.18);
 }
 
-html[data-theme='light'] .app-orb-violet {
-  background: rgb(139 92 246 / 0.14);
-}
-
-html[data-theme='light'] .app-orb-sky {
-  background: rgb(14 165 233 / 0.12);
-}
-
-html[data-theme='light'] .app-orb-emerald {
-  background: rgb(16 185 129 / 0.12);
-}
-
-html[data-theme='light'] .app-orb-rose {
-  background: rgb(244 63 94 / 0.1);
-}
-
-.theme-wipe {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  pointer-events: none;
-  transform: translateX(-105%);
-  will-change: transform;
-}
-
-.theme-wipe[data-wipe-to='light'] {
-  background:
-    linear-gradient(90deg, rgb(247 245 240) 0%, rgb(255 255 255) 55%, rgb(236 242 255) 100%);
-  box-shadow: 12px 0 40px rgb(28 25 23 / 0.18);
-}
-
-.theme-wipe[data-wipe-to='dark'] {
-  background:
-    linear-gradient(90deg, rgb(12 10 9) 0%, rgb(28 25 23) 55%, rgb(15 23 42) 100%);
-  box-shadow: 12px 0 40px rgb(0 0 0 / 0.45);
-}
-
-.theme-wipe-active {
-  animation: themeWipeAcross 780ms cubic-bezier(0.77, 0, 0.175, 1) forwards;
-}
-
-.theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 50;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-}
-
-.theme-toggle-track {
-  position: relative;
-  display: inline-flex;
-  width: 4.25rem;
-  height: 2.35rem;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 0.45rem;
-  border-radius: 999px;
-  border: 1px solid rgb(167 139 250 / 0.45);
-  background: linear-gradient(135deg, rgb(28 25 23 / 0.92), rgb(15 23 42 / 0.88));
-  color: rgb(250 250 249);
-  box-shadow:
-    0 10px 28px -16px rgb(0 0 0 / 0.7),
-    inset 0 1px 0 rgb(255 255 255 / 0.12);
-  transition:
-    border-color 200ms ease,
-    background 200ms ease,
-    color 200ms ease;
-}
-
-.theme-toggle-thumb {
-  position: absolute;
-  top: 0.22rem;
-  left: 0.22rem;
-  width: 1.85rem;
-  height: 1.85rem;
-  border-radius: 999px;
-  background: linear-gradient(145deg, rgb(250 250 249), rgb(214 211 209));
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.35);
-  transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.theme-toggle[data-theme-state='light'] .theme-toggle-thumb {
-  transform: translateX(1.9rem);
-  background: linear-gradient(145deg, rgb(255 251 235), rgb(253 224 71));
-}
-
-.theme-toggle[data-theme-state='light'] .theme-toggle-track {
-  border-color: rgb(217 119 6 / 0.45);
-  background: linear-gradient(135deg, rgb(255 255 255 / 0.95), rgb(224 242 254 / 0.9));
-  color: rgb(28 25 23);
-  box-shadow:
-    0 10px 28px -16px rgb(28 25 23 / 0.35),
-    inset 0 1px 0 rgb(255 255 255 / 0.8);
-}
-
-.theme-toggle-icon {
-  position: relative;
-  z-index: 1;
-  width: 0.95rem;
-  height: 0.95rem;
-  opacity: 0.55;
-  transition: opacity 200ms ease;
-}
-
-.theme-toggle[data-theme-state='dark'] .theme-toggle-icon-moon,
-.theme-toggle[data-theme-state='light'] .theme-toggle-icon-sun {
-  opacity: 1;
-}
-
-.theme-toggle:focus-visible .theme-toggle-track {
-  outline: 2px solid rgb(125 211 252 / 0.95);
-  outline-offset: 3px;
-}
-
-.theme-toggle:hover .theme-toggle-track {
-  border-color: rgb(196 181 253 / 0.8);
-}
-
-.theme-toggle[data-theme-state='light']:hover .theme-toggle-track {
-  border-color: rgb(245 158 11 / 0.7);
-}
-
 .home-stack {
   display: flex;
   flex-direction: column;
@@ -258,50 +107,6 @@ html[data-theme='light'] .app-orb-rose {
       rgb(255 255 255 / 0.02) 10px,
       rgb(255 255 255 / 0.02) 11px
     );
-}
-
-html[data-theme='light'] .product-screenshot-placeholder {
-  background-image:
-    linear-gradient(135deg, rgb(28 25 23 / 0.03) 0%, transparent 45%),
-    repeating-linear-gradient(
-      -12deg,
-      transparent,
-      transparent 10px,
-      rgb(28 25 23 / 0.03) 10px,
-      rgb(28 25 23 / 0.03) 11px
-    );
-}
-
-html[data-theme='light'] .text-teal-100,
-html[data-theme='light'] .text-teal-50 {
-  color: #0f766e;
-}
-
-html[data-theme='light'] .text-teal-200,
-html[data-theme='light'] .text-teal-200\/80 {
-  color: rgb(13 148 136 / 0.85);
-}
-
-html[data-theme='light'] .text-teal-300\/90 {
-  color: rgb(15 118 110 / 0.9);
-}
-
-html[data-theme='light'] .border-teal-400\/30 {
-  border-color: rgb(45 212 191 / 0.45);
-}
-
-html[data-theme='light'] .border-teal-300\/35,
-html[data-theme='light'] .border-teal-200\/40 {
-  border-color: rgb(45 212 191 / 0.4);
-}
-
-html[data-theme='light'] .bg-teal-300\/5,
-html[data-theme='light'] .bg-teal-300\/10 {
-  background-color: rgb(45 212 191 / 0.12);
-}
-
-html[data-theme='light'] .via-teal-300\/45 {
-  --tw-gradient-via: rgb(45 212 191 / 0.4);
 }
 
 .rise-in {
@@ -625,284 +430,65 @@ html[data-theme='light'] .via-teal-300\/45 {
   outline-offset: 2px;
 }
 
-html[data-theme='light'] .bg-stone-950 {
-  background-color: rgb(255 255 255);
-}
-
-html[data-theme='light'] .bg-stone-950\/92 {
-  background-color: rgb(255 255 255 / 0.94);
-}
-
-html[data-theme='light'] .bg-stone-950\/50 {
-  background-color: rgb(255 255 255 / 0.72);
-}
-
-html[data-theme='light'] .bg-stone-950\/35 {
-  background-color: rgb(255 255 255 / 0.55);
-}
-
-html[data-theme='light'] .bg-stone-900\/90 {
-  background-color: rgb(255 255 255 / 0.92);
-}
-
-html[data-theme='light'] .bg-stone-900\/85 {
-  background-color: rgb(255 255 255 / 0.9);
-}
-
-html[data-theme='light'] .bg-stone-900\/80 {
-  background-color: rgb(255 255 255 / 0.88);
-}
-
-html[data-theme='light'] .bg-stone-900\/75 {
-  background-color: rgb(255 255 255 / 0.86);
-}
-
-html[data-theme='light'] .bg-stone-900\/70 {
-  background-color: rgb(255 255 255 / 0.84);
-}
-
-html[data-theme='light'] .from-stone-950 {
-  --tw-gradient-from: rgb(250 250 249);
-  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-}
-
-html[data-theme='light'] .via-stone-900 {
-  --tw-gradient-via: rgb(255 255 255);
-}
-
-html[data-theme='light'] .via-stone-900\/85 {
-  --tw-gradient-via: rgb(255 255 255 / 0.9);
-}
-
-html[data-theme='light'] .via-stone-900\/80 {
-  --tw-gradient-via: rgb(255 255 255 / 0.88);
-}
-
-html[data-theme='light'] .to-stone-950 {
-  --tw-gradient-to: rgb(245 245 244);
-}
-
-html[data-theme='light'] .to-stone-950\/85 {
-  --tw-gradient-to: rgb(245 245 244 / 0.9);
-}
-
-html[data-theme='light'] .to-slate-900\/80 {
-  --tw-gradient-to: rgb(241 245 249 / 0.9);
-}
-
-html[data-theme='light'] .from-stone-900\/90 {
-  --tw-gradient-from: rgb(255 255 255 / 0.95);
-}
-
-html[data-theme='light'] .text-stone-50,
-html[data-theme='light'] .text-stone-100 {
-  color: rgb(28 25 23);
-}
-
-html[data-theme='light'] .text-stone-200 {
-  color: rgb(41 37 36);
-}
-
-html[data-theme='light'] .text-stone-300 {
-  color: rgb(68 64 60);
-}
-
-html[data-theme='light'] .text-stone-400 {
-  color: rgb(87 83 78);
-}
-
-html[data-theme='light'] .text-stone-500 {
-  color: rgb(120 113 108);
-}
 
 
-html[data-theme='light'] .border-stone-700\/70,
-html[data-theme='light'] .border-stone-700\/60 {
-  border-color: rgb(214 211 209 / 0.95);
-}
 
-html[data-theme='light'] .border-stone-600\/80,
-html[data-theme='light'] .border-stone-600\/70 {
-  border-color: rgb(168 162 158 / 0.85);
-}
 
-html[data-theme='light'] .typewriter-text {
-  border-right-color: rgb(68 64 60 / 0.85);
-}
 
-html[data-theme='light'] .home-fab {
-  border-color: rgb(61 186 126 / 0.4);
-  background: linear-gradient(135deg, rgb(255 255 255 / 0.95), rgb(236 253 245 / 0.92));
-  color: rgb(6 78 59);
-}
 
-html[data-theme='light'] .home-fab:hover {
-  border-color: rgb(61 186 126 / 0.65);
-  background: linear-gradient(135deg, rgb(236 253 245 / 0.95), rgb(209 250 229 / 0.9));
-}
 
-html[data-theme='light'] .tech-tab {
-  border-color: rgb(251 113 133 / 0.35);
-  background: linear-gradient(135deg, rgb(255 255 255 / 0.95), rgb(255 241 242 / 0.9));
-  color: rgb(136 19 55);
-}
 
-html[data-theme='light'] .tech-tab:hover,
-html[data-theme='light'] .tech-tab-active {
-  border-color: rgb(244 63 94 / 0.55);
-  background: linear-gradient(120deg, rgb(255 228 230 / 0.95), rgb(224 242 254 / 0.9));
-  color: rgb(136 19 55);
-}
 
-html[data-theme='light'] .service-offering-button {
-  border-color: rgb(8 145 178 / 0.35);
-  background: linear-gradient(145deg, rgb(255 255 255 / 0.96), rgb(236 254 255 / 0.92));
-  color: rgb(22 78 99);
-}
 
-html[data-theme='light'] .service-offering-button .service-offering-title {
-  color: rgb(12 74 110);
-}
 
-html[data-theme='light'] .service-offering-button .text-stone-200 {
-  color: rgb(21 94 117);
-}
 
-html[data-theme='light'] .service-offering-button:hover,
-html[data-theme='light'] .service-offering-button-active {
-  border-color: rgb(6 182 212 / 0.65);
-  background: linear-gradient(145deg, rgb(207 250 254 / 0.95), rgb(186 230 253 / 0.9));
-  color: rgb(12 74 110);
-}
 
-html[data-theme='light'] .service-offering-example {
-  border-color: rgb(14 116 144 / 0.35);
-  background: rgb(224 242 254 / 0.85);
-  color: rgb(12 74 110);
-}
 
-html[data-theme='light'] .work-filter {
-  border-color: rgb(16 185 129 / 0.35);
-  background: rgb(255 255 255 / 0.9);
-  color: rgb(6 78 59);
-}
 
-html[data-theme='light'] .work-filter:hover,
-html[data-theme='light'] .work-filter-active {
-  border-color: rgb(52 211 153 / 0.7);
-  background: linear-gradient(135deg, rgb(209 250 229 / 0.95), rgb(167 243 208 / 0.9));
-  color: rgb(6 78 59);
-}
 
-html[data-theme='light'] .contact-input {
-  border-color: rgb(139 92 246 / 0.3);
-  background: rgb(255 255 255 / 0.95);
-  color: rgb(46 16 101);
-}
 
-html[data-theme='light'] .contact-status[data-state='success'] {
-  color: rgb(4 120 87);
-}
 
-html[data-theme='light'] .contact-status[data-state='error'] {
-  color: rgb(185 28 28);
-}
 
-html[data-theme='light'] .contact-status[data-state='info'] {
-  color: rgb(146 64 14);
-}
 
-html[data-theme='light'] .text-violet-100,
-html[data-theme='light'] .text-violet-50 {
-  color: rgb(76 29 149);
-}
 
-html[data-theme='light'] .text-violet-200 {
-  color: rgb(91 33 182);
-}
 
-html[data-theme='light'] .text-emerald-100,
-html[data-theme='light'] .text-emerald-50 {
-  color: rgb(6 95 70);
-}
 
-html[data-theme='light'] .text-cyan-100,
-html[data-theme='light'] .text-cyan-50,
-html[data-theme='light'] .text-white {
-  color: rgb(22 78 99);
-}
 
-html[data-theme='light'] .text-indigo-100,
-html[data-theme='light'] .text-indigo-50 {
-  color: rgb(55 48 163);
-}
 
-html[data-theme='light'] .text-indigo-200 {
-  color: rgb(67 56 202);
-}
 
-html[data-theme='light'] .text-rose-100,
-html[data-theme='light'] .text-rose-50 {
-  color: rgb(159 18 57);
-}
 
-html[data-theme='light'] .text-sky-100,
-html[data-theme='light'] .text-sky-50 {
-  color: rgb(7 89 133);
-}
 
-html[data-theme='light'] .text-emerald-200 {
-  color: rgb(4 120 87);
-}
 
-html[data-theme='light'] .text-cyan-200 {
-  color: rgb(14 116 144);
-}
 
-html[data-theme='light'] .text-sky-200 {
-  color: rgb(3 105 161);
-}
 
-html[data-theme='light'] .text-rose-200 {
-  color: rgb(190 18 60);
-}
 
-html[data-theme='light'] .bg-cyan-900\/30 {
-  background-color: rgb(207 250 254 / 0.65);
-}
 
-html[data-theme='light'] .bg-emerald-300\/10,
-html[data-theme='light'] .bg-cyan-300\/10,
-html[data-theme='light'] .bg-violet-300\/10,
-html[data-theme='light'] .bg-indigo-300\/10,
-html[data-theme='light'] .bg-rose-300\/10,
-html[data-theme='light'] .bg-sky-300\/10 {
-  background-color: rgb(255 255 255 / 0.7);
-}
 
-html[data-theme='light'] .from-cyan-950\/70 {
-  --tw-gradient-from: rgb(207 250 254 / 0.85);
-}
 
-html[data-theme='light'] .via-sky-950\/65 {
-  --tw-gradient-via: rgb(224 242 254 / 0.8);
-}
 
-html[data-theme='light'] .to-emerald-950\/65 {
-  --tw-gradient-to: rgb(209 250 229 / 0.8);
-}
 
-html[data-theme='light'] [data-service-offerings-root] .text-white,
-html[data-theme='light'] [data-offering-title],
-html[data-theme='light'] [data-service-offerings-root] h2 {
-  color: rgb(12 74 110);
-}
 
-html[data-theme='light'] [data-offering-details],
-html[data-theme='light'] [data-service-offerings-root] .text-stone-100,
-html[data-theme='light'] [data-service-offerings-root] .text-stone-50 {
-  color: rgb(21 94 117);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .sr-only {
   position: absolute;
@@ -1232,50 +818,20 @@ body.term-open .latency-pet {
   outline: none;
 }
 
-html[data-theme='light'] .latency-pet {
-  border-color: rgb(3 105 161 / 0.3);
-  background: linear-gradient(135deg, rgb(255 255 255 / 0.95), rgb(224 242 254 / 0.9));
-  color: rgb(12 74 110);
-  box-shadow: 0 12px 32px -18px rgb(3 105 161 / 0.4);
-}
 
-html[data-theme='light'] .latency-pet-name {
-  color: rgb(3 105 161);
-}
 
-html[data-theme='light'] .latency-pet-row {
-  color: rgb(12 74 110);
-}
 
-html[data-theme='light'] .term-panel {
-  border-color: rgb(4 120 87 / 0.3);
-  background: linear-gradient(180deg, rgb(255 255 255 / 0.98), rgb(236 253 245 / 0.96));
-  color: rgb(6 78 59);
-  box-shadow: 0 24px 80px -24px rgb(4 120 87 / 0.35);
-}
 
-html[data-theme='light'] .term-header,
-html[data-theme='light'] .term-form {
-  background: rgb(209 250 229 / 0.55);
-  border-color: rgb(4 120 87 / 0.18);
-}
 
-html[data-theme='light'] .term-title,
-html[data-theme='light'] .term-close,
-html[data-theme='light'] .term-prompt {
-  color: rgb(6 95 70);
-}
 
-html[data-theme='light'] .term-input {
-  color: rgb(6 78 59);
-}
 
-html[data-theme='light'] .term-muted {
-  color: rgb(6 95 70 / 0.65);
-}
 
-html[data-theme='light'] .term-backdrop {
-  background: rgb(28 25 23 / 0.35);
+
+@media (max-width: 1023px) {
+  .latency-pet,
+  .term-root {
+    display: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1288,9 +844,6 @@ html[data-theme='light'] .term-backdrop {
   .tech-tab,
   .rise-in,
   .typewriter-text,
-  .theme-wipe,
-  .theme-wipe-active,
-  .theme-toggle-thumb,
   .latency-pet-orb,
   .latency-pet-pulse {
     animation: none !important;
@@ -1304,9 +857,5 @@ html[data-theme='light'] .term-backdrop {
     border-left-color: transparent;
     white-space: normal;
     overflow: visible;
-  }
-
-  .theme-toggle[data-theme-state='light'] .theme-toggle-thumb {
-    transform: translateX(1.9rem) !important;
   }
 }

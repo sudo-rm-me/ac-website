@@ -22,21 +22,8 @@
     <link rel="alternate" type="application/rss+xml" title="Alex - Blog" href="./rss.xml" />
     <title>1nPlace</title>
     <script>
-      (function () {
-        try {
-          var stored = localStorage.getItem('ac-theme')
-          var theme =
-            stored === 'light' || stored === 'dark'
-              ? stored
-              : window.matchMedia('(prefers-color-scheme: light)').matches
-                ? 'light'
-                : 'dark'
-          document.documentElement.dataset.theme = theme
-          document.documentElement.style.colorScheme = theme
-        } catch (e) {
-          document.documentElement.dataset.theme = 'dark'
-        }
-      })()
+      document.documentElement.dataset.theme = 'dark'
+      document.documentElement.style.colorScheme = 'dark'
     </script>
   </head>
   <body>
