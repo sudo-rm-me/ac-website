@@ -238,6 +238,72 @@ html[data-theme='light'] .app-orb-rose {
   gap: 1.1rem;
 }
 
+.home-stack-products {
+  gap: 1.5rem;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.product-showcase-media {
+  align-items: stretch;
+}
+
+.product-screenshot-placeholder {
+  background-image:
+    linear-gradient(135deg, rgb(255 255 255 / 0.03) 0%, transparent 45%),
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 10px,
+      rgb(255 255 255 / 0.02) 10px,
+      rgb(255 255 255 / 0.02) 11px
+    );
+}
+
+html[data-theme='light'] .product-screenshot-placeholder {
+  background-image:
+    linear-gradient(135deg, rgb(28 25 23 / 0.03) 0%, transparent 45%),
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 10px,
+      rgb(28 25 23 / 0.03) 10px,
+      rgb(28 25 23 / 0.03) 11px
+    );
+}
+
+html[data-theme='light'] .text-teal-100,
+html[data-theme='light'] .text-teal-50 {
+  color: #0f766e;
+}
+
+html[data-theme='light'] .text-teal-200,
+html[data-theme='light'] .text-teal-200\/80 {
+  color: rgb(13 148 136 / 0.85);
+}
+
+html[data-theme='light'] .text-teal-300\/90 {
+  color: rgb(15 118 110 / 0.9);
+}
+
+html[data-theme='light'] .border-teal-400\/30 {
+  border-color: rgb(45 212 191 / 0.45);
+}
+
+html[data-theme='light'] .border-teal-300\/35,
+html[data-theme='light'] .border-teal-200\/40 {
+  border-color: rgb(45 212 191 / 0.4);
+}
+
+html[data-theme='light'] .bg-teal-300\/5,
+html[data-theme='light'] .bg-teal-300\/10 {
+  background-color: rgb(45 212 191 / 0.12);
+}
+
+html[data-theme='light'] .via-teal-300\/45 {
+  --tw-gradient-via: rgb(45 212 191 / 0.4);
+}
+
 .rise-in {
   animation: riseIn 0.7s ease-out both;
 }
@@ -324,13 +390,13 @@ html[data-theme='light'] .app-orb-rose {
   0%,
   100% {
     box-shadow:
-      0 16px 40px -20px rgb(139 92 246 / 0.8),
+      0 16px 40px -20px rgb(61 186 126 / 0.7),
       inset 0 1px 0 rgb(255 255 255 / 0.22);
   }
 
   50% {
     box-shadow:
-      0 18px 46px -18px rgb(59 130 246 / 0.72),
+      0 18px 46px -18px rgb(46 196 200 / 0.55),
       inset 0 1px 0 rgb(255 255 255 / 0.32);
   }
 }
@@ -338,9 +404,9 @@ html[data-theme='light'] .app-orb-rose {
 .home-fab {
   isolation: isolate;
   overflow: hidden;
-  border-color: rgb(196 181 253 / 0.6);
-  background: linear-gradient(135deg, rgb(28 25 23 / 0.92), rgb(15 23 42 / 0.9));
-  color: rgb(245 243 255);
+  border-color: rgb(61 186 126 / 0.55);
+  background: linear-gradient(135deg, rgb(12 18 16 / 0.95), rgb(21 38 31 / 0.92));
+  color: rgb(232 240 235);
   backdrop-filter: blur(8px);
   animation:
     homeFabFloat 3.2s ease-in-out infinite,
@@ -360,8 +426,8 @@ html[data-theme='light'] .app-orb-rose {
 }
 
 .home-fab:hover {
-  border-color: rgb(216 180 254 / 0.92);
-  background: linear-gradient(135deg, rgb(76 29 149 / 0.52), rgb(30 64 175 / 0.42));
+  border-color: rgb(61 186 126 / 0.9);
+  background: linear-gradient(135deg, rgb(21 38 31 / 0.85), rgb(15 61 42 / 0.55));
 }
 
 .home-fab:focus-visible {
@@ -369,15 +435,16 @@ html[data-theme='light'] .app-orb-rose {
   outline-offset: 3px;
 }
 
-.home-fab-logo-wrap {
-  border: 1px solid rgb(196 181 253 / 0.35);
-  background: rgb(28 25 23 / 0.72);
+.home-fab-logo {
+  display: block;
+  object-fit: cover;
+  background: transparent;
 }
 
 .home-fab-label {
   position: relative;
   z-index: 1;
-  text-shadow: 0 0 20px rgb(139 92 246 / 0.45);
+  text-shadow: 0 0 20px rgb(61 186 126 / 0.4);
 }
 
 .tech-tab {
@@ -664,19 +731,14 @@ html[data-theme='light'] .typewriter-text {
 }
 
 html[data-theme='light'] .home-fab {
-  border-color: rgb(124 58 237 / 0.35);
-  background: linear-gradient(135deg, rgb(255 255 255 / 0.95), rgb(237 233 254 / 0.9));
-  color: rgb(49 46 129);
+  border-color: rgb(61 186 126 / 0.4);
+  background: linear-gradient(135deg, rgb(255 255 255 / 0.95), rgb(236 253 245 / 0.92));
+  color: rgb(6 78 59);
 }
 
 html[data-theme='light'] .home-fab:hover {
-  border-color: rgb(124 58 237 / 0.55);
-  background: linear-gradient(135deg, rgb(237 233 254 / 0.95), rgb(219 234 254 / 0.9));
-}
-
-html[data-theme='light'] .home-fab-logo-wrap {
-  border-color: rgb(167 139 250 / 0.35);
-  background: rgb(255 255 255 / 0.9);
+  border-color: rgb(61 186 126 / 0.65);
+  background: linear-gradient(135deg, rgb(236 253 245 / 0.95), rgb(209 250 229 / 0.9));
 }
 
 html[data-theme='light'] .tech-tab {

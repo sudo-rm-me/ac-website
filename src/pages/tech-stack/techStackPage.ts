@@ -85,7 +85,7 @@ export function TechStackPage(): string {
           <p class="mt-3 typewriter-text text-stone-300 sm:text-lg" style="${summaryTypewriterStyle}">${techStackData.summary}</p>
         </div>
         <div class="rise-in flex flex-col items-stretch gap-3" style="animation-delay: 120ms">
-          <a href="${appPath('/')}" class="inline-flex self-end rounded-xl border border-rose-300/40 px-4 py-2 text-sm font-semibold text-rose-100 transition hover:bg-rose-300/10">${techStackData.backHomeLabel}</a>
+          <a href="${appPath('/about-me')}" class="inline-flex self-end rounded-xl border border-rose-300/40 px-4 py-2 text-sm font-semibold text-rose-100 transition hover:bg-rose-300/10">${techStackData.backHomeLabel}</a>
           <div class="grid min-w-[280px] grid-cols-2 gap-3">
             <div class="rounded-xl border border-emerald-200/25 bg-emerald-200/10 px-4 py-3">
               <p class="text-xs uppercase tracking-[0.14em] text-emerald-100/80">Categories</p>

@@ -16,7 +16,7 @@ export type BlogsPageText = {
 export const blogsText: BlogsPageText = {
   title: 'Blogs',
   summary: 'Short notes from building and operating software.',
-  backHomeLabel: 'Back home',
+  backHomeLabel: 'About Me',
 }
 
 export const blogData: BlogPost[] = [

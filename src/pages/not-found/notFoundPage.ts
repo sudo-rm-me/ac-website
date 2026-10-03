@@ -11,7 +11,7 @@ export function NotFoundPage(): string {
         The page you requested does not exist or may have moved. Try returning home and navigating from there.
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
-        <a href="${appPath('/')}" class="inline-flex rounded-xl border border-violet-300/45 bg-violet-300/10 px-4 py-2 text-sm font-semibold text-violet-100 transition hover:border-cyan-300/60 hover:bg-cyan-300/15 hover:text-cyan-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/80">Back home</a>
+        <a href="${appPath('/')}" class="inline-flex rounded-xl border border-violet-300/45 bg-violet-300/10 px-4 py-2 text-sm font-semibold text-violet-100 transition hover:border-cyan-300/60 hover:bg-cyan-300/15 hover:text-cyan-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/80">Back Home</a>
         <a href="${appPath('/contact')}" class="inline-flex rounded-xl border border-stone-600/70 px-4 py-2 text-sm font-semibold text-stone-200 transition hover:border-rose-300/50 hover:bg-rose-300/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300/70">Contact</a>
       </div>
     </section>

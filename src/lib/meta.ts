@@ -38,8 +38,22 @@ function resolveMeta(route: Route): MetaInput {
       return {
         title: `About Me | ${siteConfig.name}`,
         description:
-          'DevOps and IT Operations engineer who also ships web apps — automation, reliability, and clear delivery.',
+          'Bio, case studies, tech stack, services, and writing — plus how to get in touch with Alex.',
         path: '/about-me',
+      }
+    case 'cmdb':
+      return {
+        title: `1nPlace CMDB | ${siteConfig.name}`,
+        description:
+          'Configuration Management Database for IT and infrastructure inventory — assets, relationships, impact, discovery, and reporting.',
+        path: '/cmdb',
+      }
+    case 'encrypt':
+      return {
+        title: `1nPlace Encrypt | ${siteConfig.name}`,
+        description:
+          'AES-256 encrypted local-first workspace for passwords, notes, sheets, and files — no cloud sync.',
+        path: '/encrypt',
       }
     case 'work':
       return {

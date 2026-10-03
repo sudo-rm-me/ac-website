@@ -16,7 +16,7 @@ export function ContactPage(): string {
     <section class="rise-in mt-10 rounded-2xl border border-violet-400/30 bg-stone-900/80 p-6">
       <div class="flex items-center justify-between gap-4">
         <h2 class="text-2xl font-bold text-violet-100">${contactPageText.title}</h2>
-        <a href="${appPath('/')}" class="inline-flex rounded-lg border border-violet-300/40 px-4 py-2 text-sm font-semibold text-violet-100 transition hover:bg-violet-300/10">${contactPageText.backHomeLabel}</a>
+        <a href="${appPath('/about-me')}" class="inline-flex rounded-lg border border-violet-300/40 px-4 py-2 text-sm font-semibold text-violet-100 transition hover:bg-violet-300/10">${contactPageText.backHomeLabel}</a>
       </div>
       <p class="mt-3 typewriter-text text-stone-300" style="${summaryTypewriterStyle}">${contactPageText.summary}</p>
       <div class="mt-5 h-px w-full bg-gradient-to-r from-transparent via-violet-300/40 to-transparent"></div>

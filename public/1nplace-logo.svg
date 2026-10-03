@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="1nPlace">
+  <defs>
+    <linearGradient id="mark" x1="16" y1="32" x2="50" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#2ec4c8"/>
+      <stop offset="100%" stop-color="#3dba7e"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a1a22"/>
+      <stop offset="100%" stop-color="#061018"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- n (behind) -->
+  <path
+    fill="url(#mark)"
+    d="M28.8 22.5v27H22.8v-27h6zm0 0c0 0 1.4-5.2 7.4-5.2 7.6 0 11.2 5.4 11.2 12.8v19.4h-6V30.8c0-3.8-1.8-6.4-5-6.4-3.2 0-5.6 2.4-5.6 6.2v18.9h-2z"
+  />
+  <!-- 1 (front) -->
+  <path
+    fill="url(#mark)"
+    d="M18.6 16.2 28.8 11v38.5h-6.6V16.2z"
+  />
+</svg>

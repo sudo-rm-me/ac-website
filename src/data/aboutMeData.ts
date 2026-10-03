@@ -10,7 +10,7 @@ export const aboutMeText: AboutMeText = {
   summary: 'DevOps engineer who also ships web apps (and sometimes other things).',
   positioning:
     'I help teams automate infrastructure, harden delivery, and build the web interfaces and APIs that sit on top — pragmatic work shaped to your goals, not a one-size-fits-all package.',
-  backHomeLabel: 'Back home',
+  backHomeLabel: 'Back Home',
   aboutMeBody: [
     'My name is Alex.',
     'I am a DevOps and IT Operations engineer with a bias toward clear systems, reliable releases, and software people can actually maintain.',

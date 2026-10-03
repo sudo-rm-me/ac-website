@@ -96,5 +96,5 @@ export const serviceOfferingsData: ServiceOfferingsData = {
       ],
     },
   ],
-  backHomeLabel: 'Back home',
+  backHomeLabel: 'About Me',
 }

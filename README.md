@@ -60,7 +60,10 @@ The contact form opens the visitor’s email client via `mailto:`.
 
 ## Branding
 
-- `public/ac-logo.svg` — favicon / logo
+- `brand/` — 1nPlace logo source + exported icon sizes
+- `public/1nplace-logo.png` — site logo (1nPlace brand mark)
+- `public/favicon.svg` / `public/favicon.ico` — favicons
+- `public/apple-touch-icon.png` — Apple touch icon
 - `public/og-share.png` — Open Graph / Twitter share image
 
 ## Deployment

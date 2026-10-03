@@ -3,6 +3,8 @@ import { appPath, stripBasePath } from './paths'
 export type Route =
   | { name: 'home' }
   | { name: 'about-me' }
+  | { name: 'cmdb' }
+  | { name: 'encrypt' }
   | { name: 'work' }
   | { name: 'work-case'; slug: string }
   | { name: 'service-offerings' }
@@ -39,6 +41,10 @@ export function getRoute(pathname = window.location.pathname): Route {
   switch (first) {
     case 'about-me':
       return { name: 'about-me' }
+    case 'cmdb':
+      return { name: 'cmdb' }
+    case 'encrypt':
+      return { name: 'encrypt' }
     case 'service-offerings':
       return { name: 'service-offerings' }
     case 'tech-stack':

@@ -21,7 +21,7 @@ export type TechStackData = {
 export const techStackData: TechStackData = {
   title: 'Tech Stack',
   summary: 'My tech stack and related IT skills.',
-  backHomeLabel: 'Back home',
+  backHomeLabel: 'About Me',
   categories: [
     {
       title: 'Languages and Markup',

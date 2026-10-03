@@ -24,7 +24,7 @@ export const workPageText: WorkPageText = {
   intro:
     'A short set of anonymised engagements across web delivery, cloud automation, infrastructure as code, and team enablement.',
   filterAllLabel: 'All',
-  backHomeLabel: 'Back home',
+  backHomeLabel: 'About Me',
 }
 
 export const caseStudies: CaseStudy[] = [

@@ -27,7 +27,7 @@ export function BlogsPage(): string {
         <h2 class="text-2xl font-bold text-indigo-100">${blogsText.title}</h2>
         <div class="flex flex-wrap gap-2">
           <a href="${appPath('/rss.xml')}" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-lg border border-indigo-300/40 px-4 py-2 text-sm font-semibold text-indigo-100 transition hover:bg-indigo-300/10">RSS</a>
-          <a href="${appPath('/')}" class="inline-flex rounded-lg border border-indigo-300/40 px-4 py-2 text-sm font-semibold text-indigo-100 transition hover:bg-indigo-300/10">${blogsText.backHomeLabel}</a>
+          <a href="${appPath('/about-me')}" class="inline-flex rounded-lg border border-indigo-300/40 px-4 py-2 text-sm font-semibold text-indigo-100 transition hover:bg-indigo-300/10">${blogsText.backHomeLabel}</a>
         </div>
       </div>
       <p class="mt-3 typewriter-text text-stone-300" style="${summaryTypewriterStyle}">${blogsText.summary}</p>
