@@ -72,6 +72,7 @@ function render(): void {
 
   const route = getRoute()
   appElement.innerHTML = App(route)
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   applyRouteMeta(route)
   notifyPetOfRoute(route.name)
 
