@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'Alex',
   handle: 'sudo-rm-me',
   email: 'alexcrts298@gmail.com',
-  titleDefault: 'Alex | 1nPlace products & engineering',
+  titleDefault: '1nPlace',
   descriptionDefault:
     'Builder of 1nPlace CMDB and 1nPlace — encrypted local-first workspace. DevOps engineer shipping platforms, APIs, and polished web apps.',
   locale: 'en_GB',
