@@ -1,6 +1,7 @@
 import type { FeatureText } from './dataTypes'
 import { appPath } from '../lib/paths'
 
+/** Personal hub cards shown on the About Me page. */
 export const featureGridText: FeatureText[] = [
   {
     title: 'Tech Stack',
@@ -22,13 +23,6 @@ export const featureGridText: FeatureText[] = [
     href: appPath('/service-offerings'),
     colorClass: 'text-cyan-200',
     shadowClass: 'shadow-[0_10px_40px_-18px_rgba(34,211,238,0.7)]',
-  },
-  {
-    title: 'About Me',
-    description: 'Who I am and how I work.',
-    href: appPath('/about-me'),
-    colorClass: 'text-sky-200',
-    shadowClass: 'shadow-[0_10px_40px_-18px_rgba(56,189,248,0.7)]',
   },
   {
     title: 'Blogs',

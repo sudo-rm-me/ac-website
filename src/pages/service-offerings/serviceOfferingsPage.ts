@@ -42,7 +42,7 @@ export function ServiceOfferingsPage(): string {
     <section data-service-offerings-root class="rise-in mt-10 rounded-2xl border border-cyan-300/55 bg-stone-950/92 p-6">
       <div class="flex items-center justify-between gap-4">
         <h2 class="text-2xl font-bold text-white">${serviceOfferingsData.title}</h2>
-        <a href="${appPath('/')}" class="inline-flex rounded-lg border border-cyan-300/40 px-4 py-2 text-sm font-semibold text-white transition hover:bg-cyan-300/10">${serviceOfferingsData.backHomeLabel}</a>
+        <a href="${appPath('/about-me')}" class="inline-flex rounded-lg border border-cyan-300/40 px-4 py-2 text-sm font-semibold text-white transition hover:bg-cyan-300/10">${serviceOfferingsData.backHomeLabel}</a>
       </div>
       <p class="mt-3 typewriter-text text-stone-100" style="${summaryTypewriterStyle}">${serviceOfferingsData.summary}</p>
       <div class="rise-in mt-4 rounded-xl border border-cyan-200/45 bg-cyan-900/30 p-4" style="animation-delay: 100ms">

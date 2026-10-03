@@ -18,5 +18,5 @@ export const contactPageText: ContactPageText = {
   servicePlaceholder: 'General enquiry',
   messageLabel: 'Message',
   submitLabel: 'Send message',
-  backHomeLabel: 'Back home',
+  backHomeLabel: 'About Me',
 }

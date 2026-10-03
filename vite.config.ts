@@ -24,6 +24,8 @@ type CaseStudyLite = {
 const STATIC_PATHS = [
   '/',
   '/about-me',
+  '/cmdb',
+  '/encrypt',
   '/work',
   '/service-offerings',
   '/tech-stack',
