@@ -38,21 +38,21 @@ function resolveMeta(route: Route): MetaInput {
       return {
         title: `About Me | ${siteConfig.name}`,
         description:
-          'Bio, case studies, tech stack, services, and writing — plus how to get in touch with Alex.',
+          'Bio, case studies, tech stack, services, and writing - plus how to get in touch with Alex.',
         path: '/about-me',
       }
     case 'cmdb':
       return {
         title: `1nPlace CMDB | ${siteConfig.name}`,
         description:
-          'Configuration Management Database for IT and infrastructure inventory — assets, relationships, impact, discovery, and reporting.',
+          'Configuration Management Database for IT and infrastructure inventory - assets, relationships, impact, discovery, and reporting.',
         path: '/cmdb',
       }
     case 'encrypt':
       return {
         title: `1nPlace Encrypt | ${siteConfig.name}`,
         description:
-          'AES-256 encrypted local-first workspace for passwords, notes, sheets, and files — no cloud sync.',
+          'AES-256 encrypted local-first workspace for passwords, notes, sheets, and files - no cloud sync.',
         path: '/encrypt',
       }
     case 'work':
@@ -80,7 +80,7 @@ function resolveMeta(route: Route): MetaInput {
     case 'service-offerings':
       return {
         title: `Services | ${siteConfig.name}`,
-        description: 'Web apps, DevOps, APIs, tooling, performance, and technical consulting — tailored to your goals.',
+        description: 'Web apps, DevOps, APIs, tooling, performance, and technical consulting - tailored to your goals.',
         path: '/service-offerings',
       }
     case 'tech-stack':

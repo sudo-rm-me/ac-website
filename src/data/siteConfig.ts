@@ -4,7 +4,7 @@ export const siteConfig = {
   email: 'contact@1nplace.com',
   titleDefault: '1nPlace',
   descriptionDefault:
-    'Builder of 1nPlace CMDB and 1nPlace — encrypted local-first workspace. DevOps engineer shipping platforms, APIs, and polished web apps.',
+    'Builder of 1nPlace CMDB and 1nPlace - encrypted local-first workspace. DevOps engineer shipping platforms, APIs, and polished web apps.',
   locale: 'en_GB',
   get siteUrl(): string {
     const fromEnv = import.meta.env.VITE_SITE_URL as string | undefined

@@ -4,11 +4,11 @@ Personal portfolio and services site for Alex (`sudo-rm-me`). Vite + TypeScript 
 
 ## Scripts
 
-- `pnpm dev` — local server on port 9999
-- `pnpm build` — type-check and production build (emits `404.html`, `rss.xml`, `sitemap.xml`, `robots.txt`)
-- `pnpm preview` — preview the production build
-- `pnpm lint` / `pnpm lint:fix` — ESLint
-- `pnpm format` / `pnpm format:check` — Prettier
+- `pnpm dev` - local server on port 9999
+- `pnpm build` - type-check and production build (emits `404.html`, `rss.xml`, `sitemap.xml`, `robots.txt`)
+- `pnpm preview` - preview the production build
+- `pnpm lint` / `pnpm lint:fix` - ESLint
+- `pnpm format` / `pnpm format:check` - Prettier
 
 ## Stack
 
@@ -20,33 +20,33 @@ Personal portfolio and services site for Alex (`sudo-rm-me`). Vite + TypeScript 
 
 ## Routes
 
-- `/` — home
-- `/about-me` — positioning + bio
-- `/work` — case studies with tag filters
-- `/work/:slug` — case study detail
-- `/service-offerings` — interactive service catalogue + enquire CTAs
-- `/tech-stack` — tabbed tooling overview
-- `/blogs` — blog index
-- `/blogs/:slug` — post
-- `/contact` — contact form (`?service=` prefills interest)
-- `/rss.xml` — blog feed
-- `/sitemap.xml` / `/robots.txt` — SEO
+- `/` - home
+- `/about-me` - positioning + bio
+- `/work` - case studies with tag filters
+- `/work/:slug` - case study detail
+- `/service-offerings` - interactive service catalogue + enquire CTAs
+- `/tech-stack` - tabbed tooling overview
+- `/blogs` - blog index
+- `/blogs/:slug` - post
+- `/contact` - contact form (`?service=` prefills interest)
+- `/rss.xml` - blog feed
+- `/sitemap.xml` / `/robots.txt` - SEO
 
 Legacy hash URLs such as `#/about-me` redirect to path URLs on load.
 
 ## Fun extras
 
-- **Theme toggle** (top-right) — light/dark with a left-to-right wipe; preference saved in `localStorage`
-- **Latency pet** (bottom-right) — click to open the terminal; health rises as you browse
-- **Terminal overlay** — press `` ` `` (backtick); guest shell with safe allowlisted commands (`help`, `open work`, `neofetch`, …)
+- **Theme toggle** (top-right) - light/dark with a left-to-right wipe; preference saved in `localStorage`
+- **Latency pet** (bottom-right) - click to open the terminal; health rises as you browse
+- **Terminal overlay** - press `` ` `` (backtick); guest shell with safe allowlisted commands (`help`, `open work`, `neofetch`, …)
 
 ## App structure
 
-- `src/main.ts` — entry, layout shell, route render
-- `src/lib/` — router, paths, meta/OG, contact form, theme, terminal, latency pet
-- `src/components/` — home hero + feature grid
-- `src/pages/` — route page renderers and interaction inits
-- `src/data/` — page copy and structured content
+- `src/main.ts` - entry, layout shell, route render
+- `src/lib/` - router, paths, meta/OG, contact form, theme, terminal, latency pet
+- `src/components/` - home hero + feature grid
+- `src/pages/` - route page renderers and interaction inits
+- `src/data/` - page copy and structured content
 
 ## Production env
 
@@ -60,11 +60,11 @@ The contact form opens the visitor’s email client via `mailto:`.
 
 ## Branding
 
-- `brand/` — 1nPlace logo source + exported icon sizes
-- `public/1nplace-logo.png` — site logo (1nPlace brand mark)
-- `public/favicon.svg` / `public/favicon.ico` — favicons
-- `public/apple-touch-icon.png` — Apple touch icon
-- `public/og-share.png` — Open Graph / Twitter share image
+- `brand/` - 1nPlace logo source + exported icon sizes
+- `public/1nplace-logo.png` - site logo (1nPlace brand mark)
+- `public/favicon.svg` / `public/favicon.ico` - favicons
+- `public/apple-touch-icon.png` - Apple touch icon
+- `public/og-share.png` - Open Graph / Twitter share image
 
 ## Deployment
 

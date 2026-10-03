@@ -6,7 +6,7 @@ export const aboutMeShowcaseText: ProductShowcaseText = {
   name: 'About Me',
   subtitle: 'Bio · work · services',
   pitch:
-    'DevOps engineer who ships platforms, APIs, and polished web apps — plus the case studies, tech stack, and services behind that work.',
+    'DevOps engineer who ships platforms, APIs, and polished web apps - plus the case studies, tech stack, and services behind that work.',
   href: appPath('/about-me'),
   pageSummary: 'Who I am, how I work, and how to reach me.',
   features: [

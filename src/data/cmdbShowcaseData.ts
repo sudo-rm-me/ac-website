@@ -6,7 +6,7 @@ export const cmdbShowcaseText: ProductShowcaseText = {
   name: '1nPlace CMDB',
   subtitle: 'IT / infra configuration management',
   pitch:
-    'Configuration Management Database for IT and infrastructure inventory — assets, relationships, impact analysis, discovery, and reporting in one place.',
+    'Configuration Management Database for IT and infrastructure inventory - assets, relationships, impact analysis, discovery, and reporting in one place.',
   href: appPath('/cmdb'),
   pageSummary: 'Inventory, relationships, impact, and reporting for IT teams.',
   features: [
@@ -15,12 +15,12 @@ export const cmdbShowcaseText: ProductShowcaseText = {
     'Relationship graph with impact analysis and service maps',
     'CSV import plus discovery adapters, with reconciliation and webhooks',
     'Report builder with saved reports and scheduled delivery',
-    'Web app and Tauri desktop — local SQLite or remote Postgres',
+    'Web app and Tauri desktop - local SQLite or remote Postgres',
   ],
   detailSections: [
     {
       title: 'Inventory that stays useful',
-      body: 'Track configuration items with stable CI IDs, lifecycle state, environment, ownership, health, tags, and custom attributes — built for MSPs and mid-size IT teams without pretending to be a full ITSM suite.',
+      body: 'Track configuration items with stable CI IDs, lifecycle state, environment, ownership, health, tags, and custom attributes - built for MSPs and mid-size IT teams without pretending to be a full ITSM suite.',
       bullets: [
         'Categories with attribute schema inheritance',
         'Soft-delete and restore for safer cleanup',
@@ -29,7 +29,7 @@ export const cmdbShowcaseText: ProductShowcaseText = {
     },
     {
       title: 'Relationships and impact',
-      body: 'Model how things connect — runs_on, managed_by, member_of, and more — then walk impact when something changes or fails.',
+      body: 'Model how things connect - runs_on, managed_by, member_of, and more - then walk impact when something changes or fails.',
       bullets: [
         'Miller-column browsers with resizable columns',
         'Service maps for dependency context',

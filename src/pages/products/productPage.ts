@@ -79,7 +79,7 @@ export function ProductPage(product: ProductShowcaseText): string {
           >
             ${product.demoLabel}
           </span>
-          <p class="text-xs leading-relaxed text-stone-400">Demo link placeholder — swap in a live URL when ready.</p>
+          <p class="text-xs leading-relaxed text-stone-400">Demo link placeholder - swap in a live URL when ready.</p>
         </div>
       </div>
 

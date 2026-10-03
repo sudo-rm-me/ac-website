@@ -25,7 +25,7 @@ const BOOT_TAGLINES = [
   'guest session · rm -rf blocked by friendship',
 ] as const
 
-const BOOT_LINES = ['turtle-shell v0.1 — type `help` for commands'] as const
+const BOOT_LINES = ['turtle-shell v0.1 - type `help` for commands'] as const
 
 const COMMAND_HELP = [
   'help / ?             show commands',
@@ -387,7 +387,7 @@ export function ensureTerminal(): TerminalApi {
 
   const title = document.createElement('p')
   title.className = 'term-title'
-  title.textContent = 'guest@ac-website — zsh'
+  title.textContent = 'guest@ac-website - zsh'
 
   const closeBtn = document.createElement('button')
   closeBtn.type = 'button'

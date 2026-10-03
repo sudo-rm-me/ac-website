@@ -20,7 +20,7 @@ export type WorkPageText = BasePageText & {
 
 export const workPageText: WorkPageText = {
   title: 'Work',
-  summary: 'Selected delivery stories — problem, approach, outcome.',
+  summary: 'Selected delivery stories - problem, approach, outcome.',
   intro:
     'A short set of anonymised engagements across web delivery, cloud automation, infrastructure as code, and team enablement.',
   filterAllLabel: 'All',
@@ -120,13 +120,13 @@ export const caseStudies: CaseStudy[] = [
     slug: 'confidential-training-program',
     title: 'Confidential client training program with assessments and AI',
     summary:
-      'Built a JS/HTML training experience with persistence, assessments, AI-assisted learning, and custom CSS — for a sensitive client engagement.',
+      'Built a JS/HTML training experience with persistence, assessments, AI-assisted learning, and custom CSS - for a sensitive client engagement.',
     role: 'Web / product',
     timeframe: '10 weeks',
     tags: ['JavaScript', 'HTML', 'CSS', 'AI', 'Assessments'],
     enquireService: 'Web App Development',
     problem:
-      'A confidential client needed a branded training program learners could progress through securely, with saved progress, assessments, and AI support — without exposing sensitive context in a generic off-the-shelf tool.',
+      'A confidential client needed a branded training program learners could progress through securely, with saved progress, assessments, and AI support - without exposing sensitive context in a generic off-the-shelf tool.',
     approach: [
       'Delivered the experience in HTML, JavaScript, and custom CSS so the UI matched the client’s training tone and constraints.',
       'Added persistence so learners could resume modules, track completion, and keep assessment state across sessions.',

@@ -114,7 +114,7 @@ export function ensureLatencyPet(): void {
   root.className = 'latency-pet'
   root.dataset.latencyPet = ''
   root.dataset.mood = health < 28 ? 'sleepy' : 'idle'
-  root.setAttribute('aria-label', 'Latency pet — click to open terminal')
+  root.setAttribute('aria-label', 'Latency pet - click to open terminal')
   root.title = 'Latency pet · click for terminal · press ` to open shell'
   root.innerHTML = `
     <span class="latency-pet-orb" aria-hidden="true">

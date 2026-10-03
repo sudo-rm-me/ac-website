@@ -11,7 +11,7 @@ export type ContactPageText = BasePageText & {
 
 export const contactPageText: ContactPageText = {
   title: 'Contact',
-  summary: 'Tell me what you are building — I will reply when I can help.',
+  summary: 'Tell me what you are building - I will reply when I can help.',
   nameLabel: 'Name',
   emailLabel: 'Email',
   serviceLabel: 'Service interest',

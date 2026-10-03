@@ -6,21 +6,21 @@ export const encryptShowcaseText: ProductShowcaseText = {
   name: '1nPlace Encrypt',
   subtitle: 'Encrypted local-first workspace',
   pitch:
-    'Private productivity in one place: logins with TOTP, rich notes, checklists, sheets, and encrypted files — locked behind your master passphrase.',
+    'Private productivity in one place: logins with TOTP, rich notes, checklists, sheets, and encrypted files - locked behind your master passphrase.',
   href: appPath('/encrypt'),
   pageSummary: 'AES-256 local vault for passwords, notes, sheets, and files.',
   features: [
-    'AES-256 encrypted vault with Argon2id — no cloud account, no sync server',
+    'AES-256 encrypted vault with Argon2id - no cloud account, no sync server',
     'Passwords with TOTP, strong generator, and browser CSV import',
     'Rich notes, code snippets, journals, and task checklists',
     'Full spreadsheets with formulas plus CSV import/export',
     'Encrypted files, voice memos, contacts, and bookmarks',
-    'Windows desktop via Tauri — everything stays on your machine',
+    'Windows desktop via Tauri - everything stays on your machine',
   ],
   detailSections: [
     {
       title: 'One vault, many suites',
-      body: 'Passwords, notes, journals, tasks, sheets, contacts, bookmarks, files, and voice memos live in a single encrypted workspace — no cloud account and no sync server.',
+      body: 'Passwords, notes, journals, tasks, sheets, contacts, bookmarks, files, and voice memos live in a single encrypted workspace - no cloud account and no sync server.',
       bullets: [
         'TOTP authenticator codes next to logins',
         'Rich notes with code snippets and form templates',
